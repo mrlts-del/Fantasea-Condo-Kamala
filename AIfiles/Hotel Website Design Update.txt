@@ -1,0 +1,188 @@
+# Hotel Website Design Update
+
+## Project Context
+- **Framework**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS
+- **File Structure**: App router structure
+- **Logo**: FantaseaCondoLogo.png (contains teal, coral/pink, and cream colors)
+
+## Brand Color Palette Guideline
+```
+- **Primary Colors (extracted from logo):**
+  - **Teal/Turquoise**: #4A9B9B (main brand color - for headers, icons, borders)
+  - **Coral/Pink**: #FF7B7B (accent color - for CTAs, highlights, buttons)
+  - **Cream/Beige**: #F5F1EB (background sections, cards)
+
+- **Supporting Colors:**
+  - **Deep Teal**: #2D7A7A (hover states, darker elements)
+  - **Light Coral**: #FFB3B3 (button hover states, light accents)
+  - **Warm White**: #FFFFFF (main background, text areas)
+  - **Charcoal**: #2C3E50 (primary text color)
+  - **Light Gray**: #F8F9FA (section dividers, subtle backgrounds)
+
+- **Color Application Guidelines:**
+  - Use **Teal (#4A9B9B)** for: navigation, section headings, amenity icons, room card borders
+  - Use **Coral (#FF7B7B)** for: CTA buttons, "Book Now" buttons, special offers, star ratings
+  - Use **Cream (#F5F1EB)** for: alternating section backgrounds, testimonial cards
+  - Use **Deep Teal (#2D7A7A)** for: button hover states, active navigation items
+  - Maintain 60% neutral, 30% teal, 10% coral ratio throughout the design
+```
+
+## Implementation Phases (Complete in Order)
+
+### Phase 1: Typography & Color System Setup
+**Files to modify**: `app/globals.css`, `tailwind.config.ts`
+
+**Tasks:**
+1. Add brand color variables to CSS custom properties
+2. Update Tailwind config to include custom colors
+3. Implement typography scale:
+   - Hero heading: 52px (3.25rem)
+   - Section headings: 34px (2.125rem)
+   - Subheadings: 24px (1.5rem)
+   - Body text: 16px (1rem) minimum
+4. Set consistent line-height: 1.5-1.6 across all text
+
+**Success Criteria**: All text elements use consistent sizing and brand colors are available in Tailwind classes
+
+### Phase 2: Hero Section Improvements
+**Files to modify**: `app/page.tsx`, CSS files
+
+**Tasks:**
+1. Add dark overlay with opacity 0.3-0.4 to background image
+2. Increase subtitle font size to 20px
+3. Increase logo size by 40-50%
+4. Left-align hero text instead of center
+5. Add prominent CTA button using coral color (#FF7B7B)
+
+**Success Criteria**: Hero text is readable, logo is prominent, CTA button stands out
+
+### Phase 3: Room Cards Enhancement
+**Files to modify**: `app/rooms/page.tsx`, room card components
+
+**Desktop Tasks:**
+1. Add "Book Now" button next to "View Details" button
+2. Apply coral color (#FF7B7B) to both buttons
+3. Ensure consistent card heights and spacing
+4. Add 12px border radius to all cards
+
+**Mobile Tasks:**
+1. Stack cards vertically (single column)
+2. Full-width cards with 16px margins
+3. Reduce card height to 320px
+4. Resize images to 16:9 aspect ratio (343px × 193px)
+5. Increase button height to 48px minimum
+6. Add touch feedback (scale 0.98 on press)
+
+**Success Criteria**: Cards look consistent, buttons are touch-friendly, images load properly
+
+### Phase 4: Amenities Section Redesign
+**Files to modify**: Amenities component
+
+**Tasks:**
+1. Create 4-column grid (desktop), 2-column (tablet), 1-column (mobile)
+2. Set grid gaps: 48px horizontal, 60px vertical
+3. Increase icon size to 64px × 64px
+4. Apply teal color (#4A9B9B) to all icons
+5. Add 20px spacing between icons and text
+6. Create circular background (80px diameter) behind icons
+7. Add hover effect: scale(1.05) with shadow
+8. Set text labels to 16px, medium weight
+
+**Success Criteria**: Icons are properly sized, grid responsive, hover effects work
+
+### Phase 5: Reviews Section Overhaul
+**Files to modify**: Reviews/testimonials component
+
+**Tasks:**
+1. Create testimonial cards:
+   - Size: 350px width × 280px height (desktop)
+   - Padding: 24px inside cards
+   - Border radius: 12px
+   - Box shadow: `0 4px 20px rgba(0,0,0,0.08)`
+2. Text formatting:
+   - Quote text: 18px, italic, line-height 1.6
+   - Customer name: 16px, semi-bold
+   - Location: 14px, color #666
+   - Limit quotes to 150 characters, add "..." if longer
+3. Star ratings:
+   - Size: 20px each star
+   - Color: #FFD700 (gold)
+   - 2px spacing between stars
+4. Layout: 3 cards per row (desktop), 1 per row (mobile)
+5. Add 40px horizontal spacing between cards
+
+**Success Criteria**: Cards are visually appealing, text is readable, stars are prominent
+
+### Phase 6: Location Section Mobile Optimization
+**Files to modify**: Location component, map integration
+
+**Tasks:**
+1. Mobile layout: Stack map above attractions list
+2. Reduce map height to 250px on mobile
+3. Make map full-width
+4. Simplify attractions list to top 5 items:
+   - Kamala Beach
+   - Phuket Airport
+   - Patong
+   - Local restaurants
+   - Hospital/medical
+5. Format: Icon (24px) + Name + Distance only
+6. Add "Get Directions" buttons (48px height minimum)
+7. Include "View Larger Map" link
+
+**Success Criteria**: Map loads properly, attractions list is readable, buttons are touch-friendly
+
+### Phase 7: Navigation & Footer Enhancements
+**Files to modify**: `components/Navbar.tsx`, `components/Footer.tsx`
+
+**Tasks:**
+1. Enlarge hamburger menu icon for mobile
+2. Add contact number to header
+3. Apply brand colors to navigation elements
+4. Footer improvements:
+   - Increase contact info prominence
+   - Add social media icons (teal color)
+   - Include newsletter signup with coral CTA
+   - Improve visual hierarchy
+
+**Success Criteria**: Navigation is user-friendly, footer is well-organized
+
+## Technical Implementation Guidelines
+
+### Code Quality Requirements
+- Use TypeScript strictly (no any types)
+- Implement responsive design using Tailwind breakpoints
+- Add proper error handling for image loading
+- Use Next.js Image component for optimized images
+- Implement lazy loading for below-fold content
+
+### Testing Checklist for Each Phase
+- [ ] Desktop view (1920px, 1440px, 1024px)
+- [ ] Tablet view (768px)
+- [ ] Mobile view (375px, 320px)
+- [ ] Touch interaction testing
+- [ ] Image loading performance
+- [ ] Color contrast accessibility (4.5:1 minimum)
+
+### Performance Targets
+- Page load time: < 3 seconds
+- Image optimization: < 150KB per image
+- Mobile-first responsive design
+- Proper semantic HTML structure
+
+## Validation Process
+After completing each phase:
+1. Test on multiple screen sizes
+2. Verify brand colors are applied correctly
+3. Check touch targets are minimum 48px
+4. Validate image loading and responsiveness
+5. Confirm text readability and contrast ratios
+
+## Notes for AI Agent
+- Complete phases sequentially
+- Ask for clarification if any requirement is unclear
+- Provide code snippets for review before full implementation
+- Use existing project structure and conventions
+- Maintain backward compatibility
+- Focus on clean, readable, and maintainable code

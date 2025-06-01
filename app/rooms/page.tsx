@@ -1,0 +1,180 @@
+"use client";
+
+import React from 'react';
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Star, Maximize, Utensils, Bath, Mountain, Eye, LucideWaves, Sun, AirVent, Tv, Coffee, Wifi } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import { ThemeProvider } from "next-themes";
+
+const amenityIconMap: { [key: string]: React.ElementType } = {
+  "m²": Maximize,
+  "Kitchen": Utensils,
+  "kitchen": Utensils,
+  "Bathroom": Bath,
+  "bathroom": Bath,
+  "Balcony": Mountain,
+  "View": Eye,
+  "Rooftop Pool": LucideWaves,
+  "Rooftop pool": LucideWaves,
+  "Air conditioning": AirVent,
+  "Flat-screen TV": Tv,
+  "Coffee machine": Coffee,
+  "Free Wifi": Wifi,
+};
+
+const getAmenityIcon = (amenity: string) => {
+  for (const key in amenityIconMap) {
+    if (amenity.includes(key)) {
+      return amenityIconMap[key];
+    }
+  }
+  return Star; // Default icon if no match is found
+};
+
+const ROOM_TYPES = [
+  {
+    name: "One-Bedroom Apartment",
+    description: "This apartment features a pool with a view. The air-conditioned apartment has 1 bedroom and 1 bathroom with a shower and a hairdryer. Guests can make meals in the kitchen that has a refrigerator, kitchenware, a microwave and a toaster. Boasting a balcony with garden views, this apartment also features a coffee machine and a flat-screen TV with cable channels. The unit has 1 bed.",
+    images: [
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/One-Bedroom_Apartment_2_hofhj8.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/One-Bedroom_Apartment_6_h8ydkq.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/One-Bedroom_Apartment_4_nj1gps.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_msnlkm.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_5_ezpttj.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_3_li9nwt.jpg"
+    ],
+    amenities: ["27 m²", "Private kitchen", "Private bathroom", "Balcony", "Rooftop Pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
+  },
+  {
+    name: "Studio with Balcony",
+    description: "This studio's special feature is the pool with a view. The fully equipped kitchen features a refrigerator, kitchenware, a microwave and a toaster. This air-conditioned studio includes a flat-screen TV with cable channels, a private bathroom as well as a balcony with mountain views. The unit offers 1 bed.",
+    images: [
+   "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Studio_with_Balcony_4_irbu6r.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Studio_with_Balcony_3_akao9p.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Studio_with_Balcony_iu9etm.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Studio_with_Balcony_2_urjnrz.jpg"
+    ],
+    amenities: ["34 m²", "Private Kitchen", "Private Bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
+  },
+  {
+    name: "Two-Bedroom Apartment with Balcony",
+    description: "This apartment's standout feature is the pool with a view. This air-conditioned apartment is consisted of of 1 living room, 2 separate bedrooms and 2 bathrooms with a shower. In the kitchen, guests will find a refrigerator, kitchenware, a microwave and a toaster. Featuring a balcony with mountain views, this apartment also offers a coffee machine and a flat-screen TV with cable channels. The unit offers 2 beds.",
+    images: [
+ "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_5_xue35g.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_3_xbi7wq.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_4_lond16.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Two-Bedroom_Apartment_with_Balcony_bvqce9.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/Two-Bedroom_Apartment_with_Balcony_6_rw9fmj.jpg",
+       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/Two-Bedroom_Apartment_with_Balcony_2_s5ac9x.jpg"
+    ],
+    amenities: ["47 m²", "Kitchen", "Private bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
+  }
+];
+
+function RoomsContent() {
+    const [selectedRoom, setSelectedRoom] = useState(0);
+    const searchParams = useSearchParams();
+    const room = ROOM_TYPES[selectedRoom];
+    
+    useEffect(() => {
+      const roomParam = searchParams.get('room');
+      if (roomParam) {
+        const roomIndex = parseInt(roomParam) - 1;
+        if (roomIndex >= 0 && roomIndex < ROOM_TYPES.length) {
+          setSelectedRoom(roomIndex);
+        }
+      }
+    }, [searchParams]);
+
+    return (
+      <>
+        <Navbar />
+        <div className="bg-brand-cream min-h-screen">
+          <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 pt-12 sm:pt-16">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">Our Rooms</h1>
+            <p className="body-text text-center text-brand-charcoal/70 mb-12 max-w-2xl mx-auto">Discover our carefully designed accommodations, each offering comfort and elegance for your perfect stay.</p>
+            
+            {/* Unified Room Cards Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {ROOM_TYPES.map((room, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg border border-brand-teal/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                  {/* Room Image Carousel */}
+                  <div className="relative h-64">
+                    <Carousel className="w-full h-full">
+                      <CarouselContent>
+                        {room.images.map((image, imgIndex) => (
+                          <CarouselItem key={imgIndex}>
+                            <div className="relative h-64">
+                              <img
+                                src={image}
+                                alt={`${room.name} - Image ${imgIndex + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white border-brand-teal/20 text-brand-teal" />
+                      <CarouselNext className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white border-brand-teal/20 text-brand-teal" />
+                    </Carousel>
+                  </div>
+                  
+                  {/* Room Information */}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h2 className="subheading mb-3 text-brand-charcoal min-h-[3.5rem] flex items-center">{room.name}</h2>
+                    <p className="body-text text-brand-charcoal/70 mb-6 line-clamp-3 flex-1">{room.description}</p>
+                    
+                    {/* Room Amenities */}
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold mb-4 text-brand-charcoal">Amenities</h3>
+                      <div className="grid grid-cols-2 gap-2">
+                        {room.amenities.slice(0, 6).map((amenity, amenityIndex) => {
+                          const IconComponent = getAmenityIcon(amenity);
+                          return (
+                            <div key={amenityIndex} className="flex items-center space-x-2 p-2 rounded-lg bg-brand-cream/50">
+                              <div className="w-6 h-6 rounded-full bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
+                                <IconComponent className="h-3 w-3 text-brand-teal" />
+                              </div>
+                              <span className="text-xs text-brand-charcoal font-medium truncate">{amenity}</span>
+                            </div>
+                          );
+                        })}
+                        {room.amenities.length > 6 && (
+                          <div className="flex items-center space-x-2 p-2 rounded-lg bg-brand-cream/50">
+                            <span className="text-xs text-brand-charcoal/60">+{room.amenities.length - 6} more</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {/* Book Button */}
+                    <Button className="w-full bg-coral-primary hover:bg-coral-dark text-white py-3 text-base font-medium">
+                      Book This Room
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </>
+    );
+}
+
+export default function RoomsPage() {
+    return (
+      <ThemeProvider attribute="class" defaultTheme="light">
+        <div className="flex flex-col min-h-screen">
+          <Suspense fallback={<div>Loading...</div>}>
+            <RoomsContent />
+          </Suspense>
+        </div>
+      </ThemeProvider>
+    );
+  }

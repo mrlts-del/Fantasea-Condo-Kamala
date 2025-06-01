@@ -1,0 +1,19 @@
+## Brand Color Palette Guideline
+- **Primary Colors (extracted from logo):**
+  - **Teal/Turquoise**: #4A9B9B (main brand color - for headers, icons, borders)
+  - **Coral/Pink**: #FF7B7B (accent color - for CTAs, highlights, buttons)
+  - **Cream/Beige**: #F5F1EB (background sections, cards)
+
+- **Supporting Colors:**
+  - **Deep Teal**: #2D7A7A (hover states, darker elements)
+  - **Light Coral**: #FFB3B3 (button hover states, light accents)
+  - **Warm White**: #FFFFFF (main background, text areas)
+  - **Charcoal**: #2C3E50 (primary text color)
+  - **Light Gray**: #F8F9FA (section dividers, subtle backgrounds)
+
+- **Color Application Guidelines:**
+  - Use **Teal (#4A9B9B)** for: navigation, section headings, amenity icons, room card borders
+  - Use **Coral (#FF7B7B)** for: CTA buttons, "Book Now" buttons, special offers, star ratings
+  - Use **Cream (#F5F1EB)** for: alternating section backgrounds, testimonial cards
+  - Use **Deep Teal (#2D7A7A)** for: button hover states, active navigation items
+  - Maintain 60% neutral, 30% teal, 10% coral ratio throughout the design
