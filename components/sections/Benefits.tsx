@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 
 const benefits = [
   {
-    icon: <Tag className="h-8 w-8" />,
+    icon: <Tag className="h-16 w-16 text-brand-teal" />,
     title: "Direct booking discount",
     description: ""
   },
   {
-    icon: <ScanText className="h-8 w-8" />,
+    icon: <ScanText className="h-16 w-16 text-brand-teal" />,
     title: "Contactless check-in/out option",
     description: ""
   },
   {
-    icon: <MessageSquarePlus className="h-8 w-8" />,
+    icon: <MessageSquarePlus className="h-16 w-16 text-brand-teal" />,
     title: "Special requests can be accommodated upon request",
     description: ""
   }
@@ -34,12 +34,10 @@ const Benefits = () => {
               key={index} 
               className="bg-white dark:bg-card p-4 sm:p-6 lg:p-8 rounded-lg shadow-md text-center flex flex-col h-full hover:shadow-lg transition-shadow"
             >
-              <div className="mb-3 sm:mb-4 text-primary flex justify-center">
-                <div className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8">
-                  {benefit.icon}
-                </div>
+              <div className="mx-auto mb-5 w-20 h-20 flex items-center justify-center rounded-full bg-brand-teal/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:bg-brand-teal/20">
+                {benefit.icon}
               </div>
-              <h3 className="subheading mb-2 sm:mb-3">{benefit.title}</h3>
+              <h3 className="font-medium text-base text-brand-charcoal leading-tight">{benefit.title}</h3>
               
             </div>
           ))}

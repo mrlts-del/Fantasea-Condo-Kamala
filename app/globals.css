@@ -147,3 +147,27 @@
     text-wrap: balance;
   }
 }
+
+/* Fix for Select dropdown z-index issues */
+[data-radix-select-content] {
+  z-index: 99999 !important;
+}
+
+[data-radix-popper-content-wrapper] {
+  z-index: 99999 !important;
+}
+
+/* Ensure booking bar container doesn't clip dropdowns */
+.booking-bar {
+  overflow: visible !important;
+}
+
+/* Prevent parent containers from hiding dropdowns */
+.hero-section {
+  overflow: visible !important;
+}
+
+/* Fix for Radix UI portal positioning */
+[data-radix-portal] {
+  z-index: 99999 !important;
+}

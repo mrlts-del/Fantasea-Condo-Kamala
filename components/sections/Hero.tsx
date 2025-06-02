@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = ({ onBookNowClick }: HeroProps) => {
   return (
-    <section className="relative h-screen pb-24">
+    <section className="relative h-[calc(100vh-100px)] pb-24">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{

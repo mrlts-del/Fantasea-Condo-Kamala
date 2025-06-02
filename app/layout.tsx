@@ -25,12 +25,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(
-        inter.className,
-        inter.variable,
-        playfair.variable,
-        "min-h-screen bg-background antialiased"
-      )}>
+      <body 
+        className={cn(
+          inter.className,
+          inter.variable,
+          playfair.variable,
+          "min-h-screen bg-background antialiased"
+        )}
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>
