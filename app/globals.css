@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom line clamp utility */
+.line-clamp-5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -123,8 +132,6 @@
   line-height: 1.6;
 }
 
-
-
 @media (max-width: 768px) {
   .hero-heading {
     font-size: 2.5rem; /* 40px on mobile */
@@ -132,5 +139,11 @@
   
   .section-heading {
     font-size: 1.875rem; /* 30px on mobile */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

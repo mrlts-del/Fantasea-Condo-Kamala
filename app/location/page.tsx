@@ -156,11 +156,11 @@ export default function LocationPage() {
           <p className="text-center text-brand-charcoal/70 mb-8 max-w-2xl mx-auto">Discover the beautiful attractions and destinations surrounding our hotel in Kamala, Phuket.</p>
 
           {/* Map Section */}
-          <div className="rounded-xl overflow-hidden shadow-lg border border-brand-teal/10 aspect-video min-h-[300px] sm:min-h-[400px] h-full mb-10 sm:mb-12 lg:mb-14 bg-white">
+          <div className="rounded-xl overflow-hidden shadow-lg border border-brand-teal/10 aspect-video min-h-[300px] sm:min-h-[400px] h-full mb-10 sm:mb-12 lg:mb-14 bg-white max-w-full">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63222.7365072801!2d98.290603!3d7.955367799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b0071e1491d%3A0x4a8cbf25f6f4981!2sFantasea%20Condo%20Kamala!5e0!3m2!1sen!2sus!4v1747804530096!5m2!1sen!2sus" 
-              className="w-full h-full" 
-              style={{ border: 0 }} 
+              className="w-full h-full max-w-full" 
+              style={{ border: 0, maxWidth: '100%' }} 
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"

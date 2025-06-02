@@ -37,28 +37,23 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#rooms" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base">
+                  <Link href="/rooms" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base">
                     Rooms
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#amenities" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base">
+                  <a href="/#amenities" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base" style={{scrollBehavior: 'smooth'}}>
                     Amenities
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/#reviews" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base">
+                  <a href="/#reviews" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base" style={{scrollBehavior: 'smooth'}}>
                     Reviews
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="/#location" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base">
+                  <Link href="/location" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base">
                     Location
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-white/70 hover:text-brand-coral transition-colors text-sm sm:text-base">
-                    Contact
                   </Link>
                 </li>
               </ul>

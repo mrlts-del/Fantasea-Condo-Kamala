@@ -73,7 +73,7 @@ const Rooms = () => {
         {/* Desktop: 3 columns, Tablet: 2 columns, Mobile: 1 column */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {roomsData.map((room) => (
-            <Card key={room.id} className="overflow-hidden group border border-brand-teal/20 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl bg-white h-full flex flex-col">
+            <Card key={room.id} className="overflow-hidden group border border-brand-teal/20 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl bg-white flex flex-col" style={{height: 'calc(100% - 100px)'}}>
               {/* Mobile: 16:9 aspect ratio, Desktop: square */}
               <div className="relative aspect-video md:aspect-square overflow-hidden">
                 {'images' in room && Array.isArray(room.images) ? (
@@ -94,8 +94,8 @@ const Rooms = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10" />
-                    <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10" />
+                    <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white border-white shadow-lg backdrop-blur-sm flex items-center justify-center text-brand-deep-teal" style={{filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.8))'}} />
+                    <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white border-white shadow-lg backdrop-blur-sm flex items-center justify-center text-brand-deep-teal" style={{filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.8))'}} />
                   </Carousel>
                 ) : (
                   (room as RoomWithSingleImage).image ? (
@@ -112,7 +112,7 @@ const Rooms = () => {
                   ) : null
                 )}
               </div>
-              <CardContent className="p-3 sm:p-4 flex-1 flex flex-col">
+              <CardContent className="p-3 sm:p-4 pt-2 sm:pt-3 flex-1 flex flex-col">
                 <h3 className="font-serif text-lg sm:text-xl font-semibold mb-1 leading-tight text-brand-charcoal">{room.name}</h3>
                 <p className="text-brand-charcoal/70 mt-1 mb-3 line-clamp-3 text-sm sm:text-base leading-relaxed flex-1">{room.description}</p>
                 

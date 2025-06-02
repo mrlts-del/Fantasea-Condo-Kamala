@@ -1,8 +1,14 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 
-const Hero = () => {
+interface HeroProps {
+  onBookNowClick?: () => void;
+}
+
+const Hero = ({ onBookNowClick }: HeroProps) => {
   return (
-    <section className="relative h-screen" style={{ position: 'relative' }}>
+    <section className="relative h-screen pb-24">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -25,8 +31,9 @@ const Hero = () => {
         <Button 
           size="lg" 
           className="bg-coral-primary hover:bg-coral-dark text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+          onClick={onBookNowClick}
         >
-          Book Your Stay
+          Book Now
         </Button>
       </div>
     </section>
