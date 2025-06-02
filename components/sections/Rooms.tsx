@@ -74,8 +74,8 @@ const Rooms = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {roomsData.map((room) => (
             <Card key={room.id} className="overflow-hidden group border border-brand-teal/20 shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl bg-white flex flex-col" style={{height: 'calc(100% - 100px)'}}>
-              {/* Mobile: 16:9 aspect ratio, Desktop: square */}
-              <div className="relative aspect-video md:aspect-square overflow-hidden">
+              {/* Mobile: 4:3 aspect ratio, Desktop: square */}
+              <div className="relative aspect-[4/3] md:aspect-square overflow-hidden">
                 {'images' in room && Array.isArray(room.images) ? (
                   <Carousel className="w-full h-full">
                     <CarouselContent className="h-full">

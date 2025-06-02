@@ -84,7 +84,7 @@ export default function GalleryPage() {
               <div className="w-full mb-6 sm:mb-8 lg:mb-10">
                 {/* Main Image Display */}
                 <div className="relative w-full mx-auto mb-6 flex justify-center">
-                  <div className="relative" style={{ minWidth: '800px', minHeight: '600px', width: 'min(90vw, 1000px)', height: 'min(75vh, 700px)' }}>
+                  <div className="relative w-full max-w-4xl" style={{ aspectRatio: '4/3' }}>
                     <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg border border-brand-teal/10 bg-white">
                       <Image 
                         src={filteredImages[selectedIndex]?.src || ''} 
@@ -98,15 +98,15 @@ export default function GalleryPage() {
                     {/* Navigation Arrows */}
                     <button
                       onClick={() => setSelectedIndex(selectedIndex === 0 ? filteredImages.length - 1 : selectedIndex - 1)}
-                      className="absolute -left-6 sm:-left-12 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white border border-brand-teal/30 text-brand-teal shadow-lg h-12 w-12 sm:h-14 sm:w-14 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105"
+                      className="absolute left-2 sm:-left-6 md:-left-12 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white border border-brand-teal/30 text-brand-teal shadow-lg h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105"
                     >
-                      <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+                      <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
                     </button>
                     <button
                       onClick={() => setSelectedIndex(selectedIndex === filteredImages.length - 1 ? 0 : selectedIndex + 1)}
-                      className="absolute -right-6 sm:-right-12 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white border border-brand-teal/30 text-brand-teal shadow-lg h-12 w-12 sm:h-14 sm:w-14 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105"
+                      className="absolute right-2 sm:-right-6 md:-right-12 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white border border-brand-teal/30 text-brand-teal shadow-lg h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105"
                     >
-                      <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+                      <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
                     </button>
                   </div>
                 </div>
