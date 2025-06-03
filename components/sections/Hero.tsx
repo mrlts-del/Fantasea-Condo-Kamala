@@ -13,7 +13,7 @@ const Hero = ({ onBookNowClick }: HeroProps) => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/RooftopPool_yygus4.jpg')",
+            "url('/Fantasea_Condo_Images/LandingPage Hero/Homepage_Hero_Background.png')",
         }}
       >
         {/* Updated dark overlay to 30% opacity as per Phase 2A */}

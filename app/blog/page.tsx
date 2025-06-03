@@ -15,97 +15,97 @@ const BLOG_POSTS_DATA = [
     id: 1,
     title: "Why Stay in a Japanese-Style Condo Near Kamala Beach?",
     excerpt: "A look at the unique blend of minimalist Japanese design and tropical comfort offered by condos near Kamala Beach.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895648/646750874_auhhuy.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Why_Stay_in_a_Japanese-Style_Condo_Near_Kamala_Beach.png`,
     slug: `why-stay-japanese-style-condo-kamala-beach`
   },
   {
     id: 2,
     title: "Top Amenities at Japanese-Style Condos Close to Kamala Beach",
     excerpt: "An overview of premium amenities such as rooftop pools, fitness centers, and lush gardens available in these condos.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Top_Amenities_at_Japanese-Style_Condos_Close_to_Kamala_Beach.png`,
     slug: `top-amenities-japanese-style-condos-kamala-beach`
   },
   {
     id: 3,
     title: "A Guide to Kamala Beach: Phuket’s Hidden Gem",
     excerpt: "Information about Kamala Beach as a tranquil, family-friendly destination.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/A_Guide_to_Kamala_Beach_Phukets_Hidden_Gem.png`,
     slug: `guide-kamala-beach-phuket-hidden-gem`
   },
   {
     id: 4,
     title: "Japanese Minimalism Meets Phuket Paradise: Interior Design Trends",
     excerpt: "Details on how Japanese-inspired interiors create a calming, stylish atmosphere in Kamala’s condos.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895646/One-Bedroom_Apartment_6_y1y1qt.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Japanese_Minimalism_Meets_Phuket_Paradise_Interior_Design_Trends.png`,
     slug: `japanese-minimalism-phuket-paradise-interior-design`
   },
   {
     id: 5,
     title: "Family-Friendly Activities Near Kamala Beach Condos",
     excerpt: "A list of family activities located close to Japanese-style condos near Kamala Beach.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Family_Friendly_Activities_Near_Kamala_Beach.png`,
     slug: `family-friendly-activities-kamala-beach-condos`
   },
   {
     id: 6,
     title: "How to Choose the Best Condo Type for Your Kamala Beach Stay",
     excerpt: "A comparison of one-bedroom, two-bedroom, and studio layouts for different types of stays.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895646/One-Bedroom_Apartment_6_y1y1qt.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/How_to_Choose_the_Best_Condo_Type_for_Your_Kamala_Beach_Stay.png`,
     slug: `how-to-choose-best-condo-type-kamala-beach`
   },
   {
     id: 7,
     title: "Local Attractions: What’s Within Walking Distance of Kamala Beach Condos?",
     excerpt: "A summary of nearby attractions such as Phuket FantaSea, local markets, and beaches accessible from the condos.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Local_Attractions_What’s_Within_Walking_Distance_of_Kamala_Beach_Condos.png`,
     slug: `local-attractions-walking-distance-kamala-beach-condos`
   },
   {
     id: 8,
     title: "The Benefits of Beachfront Living in Kamala",
     excerpt: "Information on direct beachfront access and ocean views from Kamala Beach condos.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/The_Benefits_of_Beachfront_Living_in_Kamala.png`,
     slug: `benefits-beachfront-living-kamala`
   },
   {
     id: 9,
-    title: "Investing in Japanese-Style Condos: Is Kamala Beach the Right Choice?",
+    title: "Investing in Real Estate: Is Kamala Beach the Right Choice?",
     excerpt: "An analysis of investment potential, rental yields, and lifestyle benefits of owning property in Kamala Beach.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895648/646750874_auhhuy.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Investing_in_Real_Estates_Is_Kamala_Beach_the_Right_Choice.png`,
     slug: `investing-japanese-style-condos-kamala-beach`
   },
   {
     id: 10,
     title: "Dining and Nightlife: Best Spots Near Kamala Beach",
     excerpt: "A guide to restaurants, beach bars, and local eateries near Japanese-style condos.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Dining_and_Nightlife_Best_Spots_Near_Kamala_Beach.png`,
     slug: `dining-nightlife-best-spots-kamala-beach`
   },
   {
     id: 11,
     title: "Wellness and Relaxation: Spa and Fitness Options in Kamala",
     excerpt: "Information on spas, wellness centers, and fitness facilities available to condo residents and visitors.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Wellness_and_Relaxation_Spa_and_Fitness_Options_in_Kamala4.png`,
     slug: `wellness-relaxation-spa-fitness-kamala`
   },
   {
     id: 12,
     title: "Getting Around Kamala: Transportation Tips for Condo Guests",
     excerpt: "Details on shuttle services, local taxis, and transportation options for exploring Kamala and Phuket.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Getting_Around_Kamala_Transportation_Tips_for_Condo_GuestsUntitled_Project.png`,
     slug: `getting-around-kamala-transportation-tips`
   },
   {
     id: 13,
     title: "Safety, Security, and Convenience: What Condo Residents Can Expect",
     excerpt: "A review of security features, contactless check-in, and on-site conveniences at Kamala Beach condos.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895648/646750874_auhhuy.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Safety_Security_and_Convenience_What_Condo_Residents_Can_Expect.png`,
     slug: `safety-security-convenience-condo-residents`
   },
   { id: 14,
     title: "Seasonal Guide: When Is the Best Time to Visit Kamala Beach?",
     excerpt: "Information on Phuket’s weather, high and low seasons, and what to expect throughout the year.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895647/646750870_xwqw0g.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/Seasonal_Guide_When_Is_the_Best_Time_to_Visit_Kamala_Beach.png`,
     slug: `seasonal-guide-best-time-visit-kamala-beach`
   },
 
@@ -113,7 +113,7 @@ const BLOG_POSTS_DATA = [
     id: 15,
     title: "A Day in the Life: What It’s Like to Stay in a Kamala Beach Condo",
     excerpt: "A description of a typical day enjoying the pool, gardens, nearby attractions, and the ambiance of Japanese-inspired living.",
-    image: `https://res.cloudinary.com/dvumjbuwj/image/upload/v1747895646/One-Bedroom_Apartment_6_y1y1qt.jpg`,
+    image: `/Fantasea_Condo_Images/Article_Thumbnails/A_Day_in_the_Life_What_Its_Like_to_Stay_in_a_Kamala_Beach_Condo.png`,
     slug: `day-in-life-stay-kamala-beach-condo`
   }
 ];

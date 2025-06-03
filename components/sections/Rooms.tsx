@@ -26,12 +26,12 @@ const roomsData: RoomData[] = [
     name: "One-Bedroom Apartment",
     description: "Spacious 27m² apartment featuring a private bathroom, balcony with city/garden/mountain views, fully equipped kitchenette, air conditioning, flat-screen TV with cable channels, and access to the rooftop pool",
     images: [
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/One-Bedroom_Apartment_2_hofhj8.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/One-Bedroom_Apartment_6_h8ydkq.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/One-Bedroom_Apartment_4_nj1gps.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_msnlkm.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_5_ezpttj.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_3_li9nwt.jpg",
+      "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment.jpg",
+      "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment2.jpg",
+      "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment3.jpg",
+      "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment4.jpg",
+      "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment5.jpg",
+      "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment6.jpg",
     ],
   },
   {
@@ -39,12 +39,12 @@ const roomsData: RoomData[] = [
     name: "Two-Bedroom Apartment with Balcony",
     description: "Generous 47m² family-friendly space with balcony/patio offering city and mountain views, private bathroom, fully equipped kitchen, dining area, sitting area with sofa, and flat-screen TV",
     images: [
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_5_xue35g.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_3_xbi7wq.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_4_lond16.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Two-Bedroom_Apartment_with_Balcony_bvqce9.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/Two-Bedroom_Apartment_with_Balcony_6_rw9fmj.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/Two-Bedroom_Apartment_with_Balcony_2_s5ac9x.jpg"
+      "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony.jpg",
+      "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony2.jpg",
+      "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony3.jpg",
+      "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony4.jpg",
+      "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony5.jpg",
+      "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony6.jpg"
     ],        
   },
   {
@@ -52,10 +52,10 @@ const roomsData: RoomData[] = [
     name: "Studio with Balcony",
     description: "Cozy 34m² studio featuring balcony/patio with mountain views, private bathroom, kitchenette with dining table, sofa bed, flat-screen TV, and access to rooftop pool facilities",
     images: [
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Studio_with_Balcony_4_irbu6r.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Studio_with_Balcony_3_akao9p.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Studio_with_Balcony_iu9etm.jpg",
-      "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Studio_with_Balcony_2_urjnrz.jpg"
+      "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony.jpg",
+      "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony2.jpg",
+      "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony3.jpg",
+      "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony4.jpg"
     ],
   },
 

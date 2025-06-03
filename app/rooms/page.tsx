@@ -41,12 +41,12 @@ const ROOM_TYPES = [
     name: "One-BR Apartment",
     description: "This 27 m² apartment features a pool with a view. The air-conditioned apartment has 1 bedroom and 1 bathroom with a shower and a hairdryer. Guests can make meals in the kitchen that has a refrigerator, kitchenware, a microwave and a toaster. Boasting a balcony with garden views, this apartment also features a coffee machine and a flat-screen TV with cable channels. The unit has 1 bed.",
     images: [
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/One-Bedroom_Apartment_2_hofhj8.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/One-Bedroom_Apartment_6_h8ydkq.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/One-Bedroom_Apartment_4_nj1gps.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_msnlkm.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_5_ezpttj.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/One-Bedroom_Apartment_3_li9nwt.jpg"
+       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment2.jpg",
+       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment6.jpg", 
+       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment3.jpg",
+       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment4.jpg",
+       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment5.jpg",
+       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment.jpg"
     ],
     amenities: ["27 m²", "Private kitchen", "Private bathroom", "Balcony", "Rooftop Pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
   },
@@ -54,10 +54,10 @@ const ROOM_TYPES = [
     name: "Studio w/ Balcony",
     description: "This 34 m² studio's special feature is the pool with a view. The fully equipped kitchen features a refrigerator, kitchenware, a microwave and a toaster. This air-conditioned studio includes a flat-screen TV with cable channels, a private bathroom as well as a balcony with mountain views. The unit offers 1 bed.",
     images: [
-   "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Studio_with_Balcony_4_irbu6r.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Studio_with_Balcony_3_akao9p.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Studio_with_Balcony_iu9etm.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Studio_with_Balcony_2_urjnrz.jpg"
+       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony4.jpg",
+       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony.jpg",
+       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony2.jpg",
+       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony3.jpg",
     ],
     amenities: ["34 m²", "Private Kitchen", "Private Bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
   },
@@ -65,12 +65,11 @@ const ROOM_TYPES = [
     name: "Two-BR Apartment w/ Balcony",
     description: "This 47 m² apartment's standout feature is the pool with a view. This air-conditioned apartment is consisted of of 1 living room, 2 separate bedrooms and 2 bathrooms with a shower. In the kitchen, guests will find a refrigerator, kitchenware, a microwave and a toaster. Featuring a balcony with mountain views, this apartment also offers a coffee machine and a flat-screen TV with cable channels. The unit offers 2 beds.",
     images: [
- "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_5_xue35g.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_3_xbi7wq.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806842/Two-Bedroom_Apartment_with_Balcony_4_lond16.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806841/Two-Bedroom_Apartment_with_Balcony_bvqce9.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/Two-Bedroom_Apartment_with_Balcony_6_rw9fmj.jpg",
-       "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747806840/Two-Bedroom_Apartment_with_Balcony_2_s5ac9x.jpg"
+       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony.jpg",
+       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony2.jpg",
+       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony3.jpg",
+       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony4.jpg",
+       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony5.jpg"
     ],
     amenities: ["47 m²", "Kitchen", "Private bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
   }
