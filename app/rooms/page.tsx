@@ -155,9 +155,11 @@ function RoomsContent() {
                     
                     {/* Button Section - Always at Bottom */}
                     <div className="mt-auto">
-                      <Button className="w-full bg-coral-primary hover:bg-coral-dark text-white py-3 text-base font-medium">
-                        Book Now
-                      </Button>
+                      <a href="https://live.ipms247.com/booking/book-rooms-sebastianchentest" target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full bg-coral-primary hover:bg-coral-dark text-white py-3 text-base font-medium">
+                          Book Now
+                        </Button>
+                      </a>
                     </div>
                     
                   </div>

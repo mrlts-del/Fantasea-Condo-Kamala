@@ -7,6 +7,7 @@ import { format } from "date-fns";
 import { CalendarIcon, UserIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import Link from "next/link";
 
 interface BookingBarProps {
   checkInDate: Date | undefined;
@@ -113,9 +114,11 @@ const BookingBar = ({
           
           {/* Search Button */}
           <div className="w-[120px]">
-            <Button className="w-full h-12 bg-coral-primary hover:bg-coral-dark text-white">
-              Search
-            </Button>
+            <Link href="https://live.ipms247.com/booking/book-rooms-sebastianchentest" target="_blank" rel="noopener noreferrer">
+              <Button className="w-full h-12 bg-coral-primary hover:bg-coral-dark text-white">
+                Search
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

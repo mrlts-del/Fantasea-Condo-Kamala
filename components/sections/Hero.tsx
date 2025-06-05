@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 
 interface HeroProps {
-  onBookNowClick?: () => void;
+  // Removed onBookNowClick since Book Now button is now in navbar
 }
 
-const Hero = ({ onBookNowClick }: HeroProps) => {
+const Hero = ({}: HeroProps) => {
   return (
     <section className="relative h-[calc(100vh-100px)] pb-24">
       <Image
-        src="/Fantasea_Condo_Images/LandingPage Hero/Homepage_Hero_Background.png"
+        src="/Fantasea_Condo_Images/Hero/Hero.jpg"
         alt="Fantasea Condo Kamala - Beachfront View"
         fill
         priority
@@ -30,13 +30,7 @@ const Hero = ({ onBookNowClick }: HeroProps) => {
         <p className="max-w-2xl text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
           Experience Japanese-style living just an 11-minute walk from Kamala Beach with mountain views and resort amenities
         </p>
-        <Button 
-          size="lg" 
-          className="bg-coral-primary hover:bg-coral-dark text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-          onClick={onBookNowClick}
-        >
-          Book Now
-        </Button>
+        {/* Book Now button moved to navbar */}
       </div>
     </section>
   );

@@ -40,8 +40,19 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-[100] w-full border-b border-brand-teal/20 bg-white/95 backdrop-blur-sm dark:border-brand-teal/30 dark:bg-background/95">
       <div className="container flex h-16 sm:h-18 md:h-22 lg:h-26 items-center px-3 sm:px-4 md:px-6">
-        {/* Logo/Brand - aligned left */}
+        {/* Hamburger Menu - moved to left */}
         <div className="flex items-center">
+          <button
+            className="flex items-center justify-center rounded-md p-2 sm:p-3 text-brand-teal hover:text-brand-deep-teal hover:bg-brand-teal/10 transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <Menu className="h-6 w-6 sm:h-7 sm:w-7" />
+          </button>
+        </div>
+        
+        {/* Logo/Brand - centered */}
+        <div className="flex items-center justify-center flex-1">
           <Link href="/" className="cursor-pointer">
             <Image 
               src="/logo.png" 
@@ -53,19 +64,13 @@ const Navbar = () => {
           </Link>
         </div>
         
-        {/* Contact Info - hidden on mobile */}
-        <div className="hidden md:flex items-center ml-auto mr-4 text-brand-teal">
-        </div>
-        
-        {/* Hamburger Menu - moved to right */}
-        <div className="flex items-center ml-auto md:ml-0">
-          <button
-            className="flex items-center justify-center rounded-md p-2 sm:p-3 text-brand-teal hover:text-brand-deep-teal hover:bg-brand-teal/10 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <Menu className="h-6 w-6 sm:h-7 sm:w-7" />
-          </button>
+        {/* Book Now Button - moved to right */}
+        <div className="flex items-center">
+          <Link href="https://live.ipms247.com/booking/book-rooms-sebastianchentest" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-coral-primary hover:bg-coral-dark text-white px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300">
+              Book Now
+            </Button>
+          </Link>
         </div>
       </div>
       {/* Full-Screen Overlay Menu */}

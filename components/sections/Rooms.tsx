@@ -126,11 +126,13 @@ const Rooms = () => {
                       View Details
                     </Button>
                   </Link>
-                  <Button 
-                    className="flex-1 h-12 bg-brand-coral hover:bg-brand-light-coral text-white font-semibold transition-all duration-300 active:scale-98"
-                  >
-                    Book Now
-                  </Button>
+                  <Link href="https://live.ipms247.com/booking/book-rooms-sebastianchentest" target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      className="flex-1 h-12 bg-brand-coral hover:bg-brand-light-coral text-white font-semibold transition-all duration-300 active:scale-98"
+                    >
+                      Book Now
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

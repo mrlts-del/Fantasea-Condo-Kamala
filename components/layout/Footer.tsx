@@ -14,8 +14,8 @@ const Footer = () => {
                 <Image
                   src="/logo.png"
                   alt="Fantasea Condo Kamala"
-                  width={60}
-                  height={60}
+                  width={120}
+                  height={120}
                   className="mr-3 w-12 h-12 sm:w-15 sm:h-15"
                 />
                 <h3 className="text-lg sm:text-xl font-bold text-white">Fantasea Condo Kamala</h3>

@@ -9,7 +9,6 @@ import Benefits from "@/components/sections/Benefits";
 import Reviews from "@/components/sections/Reviews";
 import Location from "@/components/sections/Location";
 import Footer from "@/components/layout/Footer";
-import BookingBar from "@/components/sections/BookingBar";
 import BookingBarPopup from "@/components/sections/BookingBarPopup";
 import { ThemeProvider } from "next-themes";
 
@@ -29,13 +28,8 @@ export default function Home() {
         
         {/* Hero Section with Booking Bar Container */}
         <div className="relative overflow-visible">
-          <Hero onBookNowClick={handleBookNowClick} />
-          <BookingBar
-            checkInDate={checkInDate}
-            setCheckInDate={setCheckInDate}
-            checkOutDate={checkOutDate}
-            setCheckOutDate={setCheckOutDate}
-          />
+          <Hero />
+
         </div>
         
         <Rooms />
