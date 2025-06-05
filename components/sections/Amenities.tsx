@@ -2,42 +2,42 @@ import { Wifi, UtensilsCrossed, Dumbbell, Car, Coffee, PawPrint, Globe, Utensils
 
 const amenities = [
   {
-    icon: <Wifi className="h-16 w-16 text-brand-teal" />,
+    icon: <Wifi className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "Free WiFi",
     description: "Complimentary high-speed internet access available throughout the property"
   },
   {
-    icon: <Utensils className="h-16 w-16 text-brand-teal" />,
+    icon: <Utensils className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "Fully Equipped Kitchen",
     description: "Complete with microwave, toaster, refrigerator, coffee machine and kitchenware"
   },
   {
-    icon: <LucideWaves className="h-16 w-16 text-brand-teal" />,
+    icon: <LucideWaves className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "Rooftop Swimming Pool",
     description: "Enjoy scenic views from the rooftop pool area with shallow end and pool towels provided"
   },
   {
-    icon: <LucideSunset className="h-16 w-16 text-brand-teal" />,
+    icon: <LucideSunset className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "Beachfront Location",
     description: "Property provides beachfront accommodations just minutes from Kamala Beach"
   },
   {
-    icon: <ParkingSquare className="h-16 w-16 text-brand-teal" />,
+    icon: <ParkingSquare className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "Free On-Site Parking",
     description: "Convenient parking available directly at the property for guests"
   },
   {
-    icon: <AirVent className="h-16 w-16 text-brand-teal" />,
+    icon: <AirVent className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "Air Conditioning",
     description: "Climate control available in all units for your comfort"
   },
   {
-    icon: <Flower className="h-16 w-16 text-brand-teal" />,
+    icon: <Flower className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "Garden & Sun Terrace",
     description: "Relax in the beautifully maintained garden or sunbathe on the terrace"
   },
   {
-    icon: <ShieldCheck className="h-16 w-16 text-brand-teal" />,
+    icon: <ShieldCheck className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "24-Hour Security",
     description: "CCTV in common areas and outside property with around-the-clock security personnel"
   }
@@ -52,15 +52,15 @@ const Amenities = () => {
           <p className="body-text text-brand-charcoal/80 max-w-2xl mx-auto">Enjoy our comprehensive range of facilities and services</p>
         </div>
 
-        {/* 4-column grid (desktop), 2-column (tablet), 1-column (mobile) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
+        {/* 4-column grid (mobile), 4-column (tablet), 4-column (desktop) */}
+        <div className="grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 gap-x-2 gap-y-4 sm:gap-x-12 sm:gap-y-16" >
           {amenities.map((amenity, index) => (
             <div key={index} className="text-center group">
-              {/* Circular background (80px diameter) with 64px icon */}
-              <div className="mx-auto mb-5 w-20 h-20 flex items-center justify-center rounded-full bg-brand-teal/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:bg-brand-teal/20">
+              {/* Responsive circular background */}
+              <div className="mx-auto mb-3 sm:mb-5 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center rounded-full bg-brand-teal/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:bg-brand-teal/20">
                 {amenity.icon}
               </div>
-              <h3 className="font-medium text-base text-brand-charcoal leading-tight">{amenity.title}</h3>
+              <h3 className="font-medium text-xs sm:text-sm lg:text-base text-brand-charcoal leading-tight">{amenity.title}</h3>
             </div>
           ))}
         </div>

@@ -1,0 +1,86 @@
+## GDPR/PDPA Compliance Documentation
+
+---
+
+**Data Processing Agreement (DPA) Requirements**
+
+### Controller Obligations (Your Hotel)
+- Ensure lawful basis for processing personal data
+- Implement appropriate technical and organizational measures
+- Conduct Data Protection Impact Assessments when required
+- Maintain records of processing activities
+- Report data breaches within 72 hours to authorities
+
+### Processor Obligations (Third-party services like Stripe, email providers)
+- Process data only on documented instructions from the controller
+- Ensure confidentiality of authorized personnel
+- Implement appropriate security measures
+- Assist with data subject rights requests
+- Delete or return data upon contract termination
+---
+
+**Privacy Policy Requirements**
+
+### GDPR Requirements
+- Identity and contact details of data controller
+- Purposes and legal basis for processing
+- Categories of personal data collected
+- Recipients or categories of recipients
+- Data retention periods
+- Data subject rights (access, rectification, erasure, portability)
+- Right to withdraw consent
+- Right to lodge complaints with supervisory authorities[1][6]
+
+### PDPA Thailand Requirements
+- Purpose of data collection, use, and disclosure
+- Types of personal data collected
+- Retention periods for personal data
+- Recipients of disclosed data
+- Data controller contact information
+- Data subject rights under PDPA
+
+---
+
+**Cookie Consent Requirements**
+
+### Implementation Requirements
+- Clear consent banner before any non-essential cookies
+- Granular consent options for different cookie categories
+- Easy withdrawal of consent mechanism
+- Record of user consent with timestamps
+- Clear explanation of cookie purposes and third parties involved
+
+---
+
+**Data Retention Policy**
+
+### GDPR Principles
+- Retain data only as long as necessary for specified purposes
+- Define clear retention periods for each data category
+- Automatic deletion when retention period expires
+- Document justification for retention periods
+- Regular review and audit of retention practices
+
+#### Recommended Retention Periods
+- Booking data: 3 years after check-out (for tax/legal compliance)
+- Payment data: As per Stripe's requirements (typically 7 years)
+- Marketing communications: Until consent is withdrawn
+- System logs: 12 months maximum
+
+### PDPA Compliance
+- Similar principles to GDPR
+- Maximum retention of 3 years for most business data
+- Automatic deletion unless required by Thai law
+- Clear documentation of retention rationale
+
+---
+
+**User Data Deletion Capabilities**
+
+### Required Features
+- User-initiated account deletion request form
+- Automated deletion workflow within 30 days
+- Verification process for deletion requests
+- Retention of minimal data for legal compliance only
+- Confirmation of deletion to user
+- Exception handling for ongoing legal obligations

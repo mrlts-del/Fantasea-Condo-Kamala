@@ -274,6 +274,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
                 {/* Article Content */}
                 <div className="p-6 sm:p-8 lg:p-10 prose prose-lg max-w-none">
+                  <TableOfContents sections={tocSections} />
                   <section id="introduction">
                     <h2 className="text-2xl font-serif font-bold text-brand-charcoal mb-4">Introduction</h2>
                     <p className="text-brand-charcoal/80 leading-relaxed mb-6">
@@ -341,10 +342,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <RelatedPosts currentSlug={post.slug} />
             </div>
 
-            {/* Sidebar with Table of Contents */}
-            <div className="lg:col-span-1">
-              <TableOfContents sections={tocSections} />
-            </div>
+
           </div>
         </div>
       </main>

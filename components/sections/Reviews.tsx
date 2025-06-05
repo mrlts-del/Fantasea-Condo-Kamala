@@ -197,7 +197,7 @@ const Reviews = () => {
                         ))}
                       </div>
                       
-                      <p className="italic text-brand-charcoal/90 mb-6 flex-grow text-base sm:text-lg leading-relaxed">"{review.quote}"</p>
+                      <p className="italic text-brand-charcoal/90 mb-6 flex-grow text-base sm:text-lg leading-relaxed">&ldquo;{review.quote}&rdquo;</p>
                       
                       {/* Author info with country flag */}
                       <div className="flex items-center mt-auto">

@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: { unoptimized: true },
-  output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
+  images: {
+    unoptimized: true, // Disable optimization for static export
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
   },
-
+  output: 'export',
 };
 
 module.exports = nextConfig;
