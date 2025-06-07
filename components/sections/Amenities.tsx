@@ -1,4 +1,4 @@
-import { Wifi, UtensilsCrossed, Dumbbell, Car, Coffee, PawPrint, Globe, Utensils, LucideWaves, ParkingSquare, AirVent, Flower, ShieldCheck, LucideSunset } from "lucide-react";
+import { Wifi, UtensilsCrossed, Dumbbell, Car, Coffee, PawPrint, Globe, Utensils, LucideWaves, ParkingSquare, AirVent, Flower, ShieldCheck, LucideSunset, Mountain } from "lucide-react";
 
 const amenities = [
   {
@@ -40,20 +40,25 @@ const amenities = [
     icon: <ShieldCheck className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
     title: "24-Hour Security",
     description: "CCTV in common areas and outside property with around-the-clock security personnel"
+  },
+  {
+    icon: <Mountain className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
+    title: "Kathu Waterfall",
+    description: "Explore the beautiful Kathu Waterfall, a natural attraction nearby"
   }
 ];
 
 const Amenities = () => {
   return (
     <section id="amenities" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12 sm:mb-16 lg:mb-20 text-center">
           <h2 className="section-heading font-bold font-serif mb-4 text-brand-charcoal">Amenities & Attractions</h2>
           <p className="body-text text-brand-charcoal/80 max-w-2xl mx-auto">Enjoy our comprehensive range of facilities and services</p>
         </div>
 
         {/* 4-column grid (mobile), 4-column (tablet), 4-column (desktop) */}
-        <div className="grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 gap-x-2 gap-y-4 sm:gap-x-12 sm:gap-y-16" >
+        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-x-2 gap-y-4 sm:gap-x-12 sm:gap-y-16" >
           {amenities.map((amenity, index) => (
             <div key={index} className="text-center group">
               {/* Responsive circular background */}

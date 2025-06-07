@@ -22,10 +22,10 @@ const benefits = [
 const Benefits = () => {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-brand-cream dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 sm:mb-10 lg:mb-12 text-center">
         <h2 className="section-heading font-bold font-serif mb-4 text-brand-charcoal">Direct Booking Benefits</h2>
-
+        <p className="body-text text-brand-charcoal/80 max-w-2xl mx-auto">Enjoy our exclusive offerings when booking direct</p>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-2 sm:gap-4 lg:gap-8 max-w-5xl mx-auto">

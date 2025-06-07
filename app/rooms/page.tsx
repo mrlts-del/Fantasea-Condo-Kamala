@@ -94,7 +94,7 @@ function RoomsContent() {
       <>
         <Navbar />
         <div className="bg-brand-cream min-h-screen">
-          <div className="container mx-auto px-3 sm:px-4 py-6 sm:py-8 pt-12 sm:pt-16">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8 pt-12 sm:pt-16">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">Our Rooms</h1>
             <p className="body-text text-center text-brand-charcoal/70 mb-12 max-w-2xl mx-auto">Discover our carefully designed accommodations, each offering comfort and elegance for your perfect stay.</p>
             
@@ -102,6 +102,11 @@ function RoomsContent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
               {ROOM_TYPES.map((room, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg border border-brand-teal/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col min-h-[650px]">
+                  
+                  {/* Title Section - Refined Design */}
+                  <div className="bg-white border-l-4 border-r-4 border-brand-teal px-6 py-4 rounded-t-xl shadow-sm">
+  <h2 className="font-serif text-lg sm:text-xl font-semibold text-brand-charcoal text-center tracking-wide leading-tight">{room.name}</h2>
+</div>
                   
                   {/* Image Section - Fixed Height */}
                   <div className="relative h-64 flex-shrink-0">
@@ -125,10 +130,7 @@ function RoomsContent() {
                   </div>
                   
                   {/* Content Section - Flexible Layout */}
-                  <div className="flex flex-col flex-grow p-6">
-                    
-                    {/* Title Section */}
-                    <h2 className="subheading mb-3 text-brand-charcoal min-h-[3.5rem] flex items-center">{room.name}</h2>
+                  <div className="flex flex-col flex-grow p-6 text-center">
                     
                     {/* Description Section - Fixed Height with Overflow */}
                     <div className="h-32 overflow-hidden mb-6">
@@ -137,16 +139,16 @@ function RoomsContent() {
                     
                     {/* Amenities Section - Flexible Growth */}
                     <div className="flex-grow mb-6">
-                      <h3 className="text-lg font-semibold mb-4 text-brand-charcoal">Amenities</h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <h3 className="text-lg font-semibold mb-4 text-brand-charcoal text-center">Amenities</h3>
+                      <div className="grid grid-cols-3 gap-2">
                         {room.amenities.map((amenity, amenityIndex) => {
                           const IconComponent = getAmenityIcon(amenity);
                           return (
-                            <div key={amenityIndex} className="flex items-center space-x-2 p-2 rounded-lg bg-brand-cream/50">
+                            <div key={amenityIndex} className="flex flex-col items-center text-center space-y-1 p-2 rounded-lg bg-brand-cream/50">
                               <div className="w-6 h-6 rounded-full bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
                                 <IconComponent className="h-3 w-3 text-brand-teal" />
                               </div>
-                              <span className="text-xs text-brand-charcoal font-medium">{amenity}</span>
+                              <span className="text-[0.65rem] text-brand-charcoal font-medium leading-tight">{amenity}</span>
                             </div>
                           );
                         })}
