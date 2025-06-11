@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "title": "{{HERO_TITLE}}",
+    "subtitle": "{{HERO_SUBTITLE}}",
+    "description": "{{HERO_DESCRIPTION}}",
+    "ctaButton": {
+      "text": "{{HERO_CTA_TEXT}}",
+      "url": "{{HERO_CTA_URL}}"
+    },
+    "backgroundImage": "/assets/template/hero/{{HERO_BACKGROUND_IMAGE}}",
+    "backgroundVideo": "/assets/template/hero/{{HERO_BACKGROUND_VIDEO}}"
+  },
+  "benefits": {
+    "title": "{{BENEFITS_TITLE}}",
+    "description": "{{BENEFITS_DESCRIPTION}}",
+    "items": [
+      {
+        "title": "{{BENEFIT_1_TITLE}}",
+        "description": "{{BENEFIT_1_DESCRIPTION}}",
+        "icon": "{{BENEFIT_1_ICON}}",
+        "image": "/assets/template/gallery/{{BENEFIT_1_IMAGE}}"
+      },
+      {
+        "title": "{{BENEFIT_2_TITLE}}",
+        "description": "{{BENEFIT_2_DESCRIPTION}}",
+        "icon": "{{BENEFIT_2_ICON}}",
+        "image": "/assets/template/gallery/{{BENEFIT_2_IMAGE}}"
+      },
+      {
+        "title": "{{BENEFIT_3_TITLE}}",
+        "description": "{{BENEFIT_3_DESCRIPTION}}",
+        "icon": "{{BENEFIT_3_ICON}}",
+        "image": "/assets/template/gallery/{{BENEFIT_3_IMAGE}}"
+      }
+    ]
+  },
+  "location": {
+    "title": "{{LOCATION_TITLE}}",
+    "description": "{{LOCATION_DESCRIPTION}}",
+    "address": {
+      "street": "{{LOCATION_ADDRESS_STREET}}",
+      "city": "{{LOCATION_ADDRESS_CITY}}",
+      "state": "{{LOCATION_ADDRESS_STATE}}",
+      "country": "{{LOCATION_ADDRESS_COUNTRY}}",
+      "zipCode": "{{LOCATION_ADDRESS_ZIP}}"
+    },
+    "coordinates": {
+      "latitude": "{{LOCATION_LATITUDE}}",
+      "longitude": "{{LOCATION_LONGITUDE}}"
+    },
+    "nearbyAttractions": [
+      {
+        "name": "{{ATTRACTION_1_NAME}}",
+        "description": "{{ATTRACTION_1_DESCRIPTION}}",
+        "distance": "{{ATTRACTION_1_DISTANCE}}",
+        "category": "{{ATTRACTION_1_CATEGORY}}",
+        "image": "/assets/template/gallery/{{ATTRACTION_1_IMAGE}}"
+      },
+      {
+        "name": "{{ATTRACTION_2_NAME}}",
+        "description": "{{ATTRACTION_2_DESCRIPTION}}",
+        "distance": "{{ATTRACTION_2_DISTANCE}}",
+        "category": "{{ATTRACTION_2_CATEGORY}}",
+        "image": "/assets/template/gallery/{{ATTRACTION_2_IMAGE}}"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "{{REVIEWS_TITLE}}",
+    "description": "{{REVIEWS_DESCRIPTION}}",
+    "testimonials": [
+      {
+        "name": "{{REVIEW_1_NAME}}",
+        "title": "{{REVIEW_1_TITLE}}",
+        "content": "{{REVIEW_1_CONTENT}}",
+        "rating": "{{REVIEW_1_RATING}}",
+        "source": "{{REVIEW_1_SOURCE}}",
+        "date": "{{REVIEW_1_DATE}}",
+        "avatar": "/assets/template/gallery/{{REVIEW_1_AVATAR}}"
+      },
+      {
+        "name": "{{REVIEW_2_NAME}}",
+        "title": "{{REVIEW_2_TITLE}}",
+        "content": "{{REVIEW_2_CONTENT}}",
+        "rating": "{{REVIEW_2_RATING}}",
+        "source": "{{REVIEW_2_SOURCE}}",
+        "date": "{{REVIEW_2_DATE}}",
+        "avatar": "/assets/template/gallery/{{REVIEW_2_AVATAR}}"
+      }
+    ]
+  },
+  "pages": {
+    "home": {
+      "title": "{{HOME_PAGE_TITLE}}",
+      "metaDescription": "{{HOME_PAGE_META_DESCRIPTION}}",
+      "keywords": "{{HOME_PAGE_KEYWORDS}}"
+    },
+    "rooms": {
+      "title": "{{ROOMS_PAGE_TITLE}}",
+      "metaDescription": "{{ROOMS_PAGE_META_DESCRIPTION}}",
+      "keywords": "{{ROOMS_PAGE_KEYWORDS}}"
+    },
+    "location": {
+      "title": "{{LOCATION_PAGE_TITLE}}",
+      "metaDescription": "{{LOCATION_PAGE_META_DESCRIPTION}}",
+      "keywords": "{{LOCATION_PAGE_KEYWORDS}}"
+    },
+    "gallery": {
+      "title": "{{GALLERY_PAGE_TITLE}}",
+      "metaDescription": "{{GALLERY_PAGE_META_DESCRIPTION}}",
+      "keywords": "{{GALLERY_PAGE_KEYWORDS}}"
+    }
+  }
+}

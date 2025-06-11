@@ -1,0 +1,35 @@
+{
+  "sectionTitle": "Location & Nearby",
+  "sectionDescription": "Find us in the heart of Kamala Beach, Phuket",
+  "contactInfo": {
+    "hotelName": "Fantasea Condo Kamala",
+    "address": "Kamala Beach, Phuket, Thailand",
+    "phone": "+66 76 123 456",
+    "email": "info@kamalahotel.com",
+    "checkIn": "3:00 PM",
+    "checkOut": "11:00 AM"
+  },
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63222.7365072801!2d98.290603!3d7.955367799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b0071e1491d%3A0x4a8cbf25f6f4981!2sFantasea%20Condo%20Kamala!5e0!3m2!1sen!2sus!4v1747804530096!5m2!1sen!2sus",
+  "nearbyAttractions": [
+    {
+      "name": "Kamala Beach",
+      "distance": "11-minute walk"
+    },
+    {
+      "name": "Patong Boxing Stadium",
+      "distance": "6.6 miles"
+    },
+    {
+      "name": "Jungceylon Shopping Center",
+      "distance": "6.8 miles"
+    },
+    {
+      "name": "Laem Sing Beach",
+      "distance": "1.8 miles"
+    },
+    {
+      "name": "Phuket International Airport",
+      "distance": "16 miles"
+    }
+  ]
+}

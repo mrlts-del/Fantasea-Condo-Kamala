@@ -1,0 +1,54 @@
+{
+  "sectionTitle": "Our Rooms",
+  "sectionDescription": "Discover our carefully designed accommodations, each offering comfort and elegance for your perfect stay.",
+  "roomTypes": [
+    {
+      "id": "one-br",
+      "name": "One-BR Apartment",
+      "description": "This 27 m² apartment features a pool with a view. The air-conditioned apartment has 1 bedroom and 1 bathroom with a shower and a hairdryer. Guests can make meals in the kitchen that has a refrigerator, kitchenware, a microwave and a toaster. Boasting a balcony with garden views, this apartment also features a coffee machine and a flat-screen TV with cable channels. The unit has 1 bed.",
+      "images": [
+        "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment2.jpg",
+        "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment6.jpg", 
+        "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment3.jpg",
+        "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment4.jpg",
+        "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment5.jpg",
+        "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment.jpg"
+      ],
+      "features": ["Queen bed", "Kitchenette", "Private balcony", "Air conditioning"],
+      "maxGuests": 2,
+      "size": "27 sqm",
+      "bedType": "1 bed"
+    },
+    {
+      "id": "studio",
+      "name": "Studio w/ Balcony",
+      "description": "This 34 m² studio's special feature is the pool with a view. The fully equipped kitchen features a refrigerator, kitchenware, a microwave and a toaster. This air-conditioned studio includes a flat-screen TV with cable channels, a private bathroom as well as a balcony with mountain views. The unit offers 1 bed.",
+      "images": [
+        "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony4.jpg",
+        "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony.jpg",
+        "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony2.jpg",
+        "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony3.jpg"
+      ],
+      "features": ["King bed", "Full kitchen", "Living area", "Private balcony", "Air conditioning"],
+      "maxGuests": 2,
+      "size": "34 sqm",
+      "bedType": "1 bed"
+    },
+    {
+      "id": "two-bedroom",
+      "name": "Two-BR Apartment w/ Balcony",
+      "description": "This 47 m² apartment's standout feature is the pool with a view. This air-conditioned apartment is consisted of of 1 living room, 2 separate bedrooms and 2 bathrooms with a shower. In the kitchen, guests will find a refrigerator, kitchenware, a microwave and a toaster. Featuring a balcony with mountain views, this apartment also offers a coffee machine and a flat-screen TV with cable channels. The unit offers 2 beds.",
+      "images": [
+        "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony.jpg",
+        "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony2.jpg",
+        "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony3.jpg",
+        "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony4.jpg",
+        "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony5.jpg"
+      ],
+      "features": ["2 bedrooms", "Full kitchen", "Living area", "2 bathrooms", "Private balcony"],
+      "maxGuests": 4,
+      "size": "47 sqm",
+      "bedType": "2 beds"
+    }
+  ]
+}

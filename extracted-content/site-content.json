@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "title": "Fantasea Condo Kamala | Luxury Beachfront Accommodation Phuket",
+    "description": "Experience luxury at Fantasea Condo Kamala. Premium beachfront accommodation with stunning ocean views and modern amenities in Kamala Beach, Phuket.",
+    "keywords": ["luxury accommodation", "beachfront", "Kamala Beach", "Phuket", "ocean views", "modern amenities", "vacation rental", "Thailand"],
+    "openGraph": {
+      "title": "Fantasea Condo Kamala | Luxury Beachfront Accommodation",
+      "description": "Experience luxury at Fantasea Condo Kamala. Premium beachfront accommodation with stunning ocean views.",
+      "url": "https://fantasea-condo-kamala.com",
+      "siteName": "Fantasea Condo Kamala",
+      "images": ["/Fantasea_Condo_Images/Hero/Hero.jpg"]
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Fantasea Condo Kamala | Luxury Beachfront Accommodation",
+      "description": "Experience luxury at Fantasea Condo Kamala.",
+      "images": ["/Fantasea_Condo_Images/Hero/Hero.jpg"]
+    }
+  },
+  "site": {
+    "name": "Fantasea Condo Kamala",
+    "url": "https://fantasea-condo-kamala.com",
+    "language": "en",
+    "locale": "en_US",
+    "timezone": "Asia/Bangkok",
+    "currency": "THB",
+    "country": "Thailand"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "Playfair Display",
+    "variables": {
+      "sans": "--font-sans",
+      "serif": "--font-serif"
+    }
+  },
+  "accessibility": {
+    "skipNavigation": true,
+    "structuredData": true,
+    "suppressHydrationWarning": true
+  }
+}

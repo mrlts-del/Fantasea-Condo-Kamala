@@ -1,0 +1,267 @@
+{
+  "gallery": {
+    "title": "Photo Gallery",
+    "description": "Explore our beautiful accommodations and facilities through our comprehensive photo gallery.",
+    "categories": ["ALL", "Rooms", "Facilities", "Area"],
+    "images": [
+      {
+        "id": 1,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment.jpg",
+        "alt": "One-Bedroom Apartment",
+        "category": "Rooms",
+        "description": "Spacious one-bedroom apartment with modern amenities",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["bedroom", "modern", "spacious"]
+      },
+      {
+        "id": 2,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_2.jpg",
+        "alt": "One-Bedroom Apartment 2",
+        "category": "Rooms",
+        "description": "Elegant bedroom with ocean view",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["bedroom", "ocean view", "elegant"]
+      },
+      {
+        "id": 3,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_3.jpg",
+        "alt": "One-Bedroom Apartment 3",
+        "category": "Rooms",
+        "description": "Modern living space with contemporary design",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["living room", "contemporary", "modern"]
+      },
+      {
+        "id": 4,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_4.jpg",
+        "alt": "One-Bedroom Apartment 4",
+        "category": "Rooms",
+        "description": "Luxurious bathroom with premium fixtures",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["bathroom", "luxury", "premium"]
+      },
+      {
+        "id": 5,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_5.jpg",
+        "alt": "One-Bedroom Apartment 5",
+        "category": "Rooms",
+        "description": "Fully equipped kitchen for your convenience",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["kitchen", "equipped", "convenience"]
+      },
+      {
+        "id": 6,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_6.jpg",
+        "alt": "One-Bedroom Apartment 6",
+        "category": "Rooms",
+        "description": "Private balcony with stunning views",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["balcony", "private", "views"]
+      },
+      {
+        "id": 7,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony.jpg",
+        "alt": "Studio with Balcony",
+        "category": "Rooms",
+        "description": "Cozy studio apartment with balcony access",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["studio", "cozy", "balcony"]
+      },
+      {
+        "id": 8,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony_2.jpg",
+        "alt": "Studio with Balcony 2",
+        "category": "Rooms",
+        "description": "Efficient layout maximizing space and comfort",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["studio", "efficient", "space"]
+      },
+      {
+        "id": 9,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony_3.jpg",
+        "alt": "Studio with Balcony 3",
+        "category": "Rooms",
+        "description": "Bright and airy studio with natural light",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["studio", "bright", "natural light"]
+      },
+      {
+        "id": 10,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony_4.jpg",
+        "alt": "Studio with Balcony 4",
+        "category": "Rooms",
+        "description": "Modern amenities in a compact design",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["studio", "modern", "compact"]
+      },
+      {
+        "id": 11,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony.jpg",
+        "alt": "Two-Bedroom Apartment with Balcony",
+        "category": "Rooms",
+        "description": "Spacious two-bedroom apartment perfect for families",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["two bedroom", "spacious", "family"]
+      },
+      {
+        "id": 12,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_2.jpg",
+        "alt": "Two-Bedroom Apartment with Balcony 2",
+        "category": "Rooms",
+        "description": "Master bedroom with panoramic views",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["master bedroom", "panoramic", "views"]
+      },
+      {
+        "id": 13,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_3.jpg",
+        "alt": "Two-Bedroom Apartment with Balcony 3",
+        "category": "Rooms",
+        "description": "Second bedroom with comfortable furnishing",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["second bedroom", "comfortable", "furnishing"]
+      },
+      {
+        "id": 14,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_4.jpg",
+        "alt": "Two-Bedroom Apartment with Balcony 4",
+        "category": "Rooms",
+        "description": "Open plan living and dining area",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["open plan", "living", "dining"]
+      },
+      {
+        "id": 15,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_5.jpg",
+        "alt": "Two-Bedroom Apartment with Balcony 5",
+        "category": "Rooms",
+        "description": "Premium kitchen with island counter",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["kitchen", "premium", "island"]
+      },
+      {
+        "id": 16,
+        "src": "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_6.jpg",
+        "alt": "Two-Bedroom Apartment with Balcony 6",
+        "category": "Rooms",
+        "description": "Expansive balcony for outdoor relaxation",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["balcony", "expansive", "outdoor"]
+      },
+      {
+        "id": 17,
+        "src": "/Fantasea_Condo_Images/Gallery/Area/646752003.jpg",
+        "alt": "Area View 1",
+        "category": "Area",
+        "description": "Beautiful surroundings of Kamala Beach",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["beach", "surroundings", "beautiful"]
+      },
+      {
+        "id": 18,
+        "src": "/Fantasea_Condo_Images/Gallery/Area/646752014.jpg",
+        "alt": "Area View 2",
+        "category": "Area",
+        "description": "Scenic landscape and tropical paradise",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["landscape", "scenic", "tropical"]
+      },
+      {
+        "id": 19,
+        "src": "/Fantasea_Condo_Images/Gallery/Facilities/646750870.jpg",
+        "alt": "Facility 1",
+        "category": "Facilities",
+        "description": "Resort-style swimming pool",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["pool", "resort style", "swimming"]
+      },
+      {
+        "id": 20,
+        "src": "/Fantasea_Condo_Images/Gallery/Facilities/646750874.jpg",
+        "alt": "Facility 2",
+        "category": "Facilities",
+        "description": "Fitness center with modern equipment",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["fitness", "modern", "equipment"]
+      },
+      {
+        "id": 21,
+        "src": "/Fantasea_Condo_Images/Gallery/Facilities/646750889.jpg",
+        "alt": "Facility 3",
+        "category": "Facilities",
+        "description": "Relaxing spa and wellness center",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["spa", "wellness", "relaxing"]
+      },
+      {
+        "id": 22,
+        "src": "/Fantasea_Condo_Images/Gallery/Facilities/646751983.jpg",
+        "alt": "Facility 4",
+        "category": "Facilities",
+        "description": "Rooftop terrace with panoramic views",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["rooftop", "terrace", "panoramic"]
+      },
+      {
+        "id": 23,
+        "src": "/Fantasea_Condo_Images/Gallery/Facilities/646751989.jpg",
+        "alt": "Facility 5",
+        "category": "Facilities",
+        "description": "Business center and meeting rooms",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["business", "meeting", "center"]
+      },
+      {
+        "id": 24,
+        "src": "/Fantasea_Condo_Images/Gallery/Facilities/646751992.jpg",
+        "alt": "Facility 6",
+        "category": "Facilities",
+        "description": "Children's play area and family zone",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["children", "play area", "family"]
+      },
+      {
+        "id": 25,
+        "src": "/Fantasea_Condo_Images/Gallery/Facilities/646752024.jpg",
+        "alt": "Facility 7",
+        "category": "Facilities",
+        "description": "Concierge and reception services",
+        "photographer": "Hotel Staff",
+        "date": "2024",
+        "tags": ["concierge", "reception", "services"]
+      }
+    ],
+    "settings": {
+      "autoPlay": true,
+      "autoPlayInterval": 3000,
+      "showInfo": true,
+      "enableFullscreen": true,
+      "enableSlideshow": true,
+      "viewModes": ["grid", "carousel"]
+    }
+  }
+}

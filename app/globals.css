@@ -142,11 +142,7 @@
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+
 
 /* Fix for Select dropdown z-index issues */
 [data-radix-select-content] {

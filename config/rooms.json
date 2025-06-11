@@ -1,0 +1,81 @@
+{
+  "title": "{{ROOMS_TITLE}}",
+  "description": "{{ROOMS_DESCRIPTION}}",
+  "roomTypes": [
+    {
+      "id": "studio",
+      "name": "{{ROOM_TYPE_1_NAME}}",
+      "description": "{{ROOM_TYPE_1_DESCRIPTION}}",
+      "size": "{{ROOM_TYPE_1_SIZE}}",
+      "occupancy": {
+        "adults": "{{ROOM_TYPE_1_ADULTS}}",
+        "children": "{{ROOM_TYPE_1_CHILDREN}}"
+      },
+      "price": {
+        "currency": "{{CURRENCY}}",
+        "amount": "{{ROOM_TYPE_1_PRICE}}",
+        "period": "{{PRICE_PERIOD}}"
+      },
+      "images": [
+        "/assets/template/rooms/{{ROOM_TYPE_1_IMAGE_1}}",
+        "/assets/template/rooms/{{ROOM_TYPE_1_IMAGE_2}}",
+        "/assets/template/rooms/{{ROOM_TYPE_1_IMAGE_3}}"
+      ],
+      "amenities": [
+        "{{ROOM_TYPE_1_AMENITY_1}}",
+        "{{ROOM_TYPE_1_AMENITY_2}}",
+        "{{ROOM_TYPE_1_AMENITY_3}}"
+      ]
+    },
+    {
+      "id": "one-bedroom",
+      "name": "{{ROOM_TYPE_2_NAME}}",
+      "description": "{{ROOM_TYPE_2_DESCRIPTION}}",
+      "size": "{{ROOM_TYPE_2_SIZE}}",
+      "occupancy": {
+        "adults": "{{ROOM_TYPE_2_ADULTS}}",
+        "children": "{{ROOM_TYPE_2_CHILDREN}}"
+      },
+      "price": {
+        "currency": "{{CURRENCY}}",
+        "amount": "{{ROOM_TYPE_2_PRICE}}",
+        "period": "{{PRICE_PERIOD}}"
+      },
+      "images": [
+        "/assets/template/rooms/{{ROOM_TYPE_2_IMAGE_1}}",
+        "/assets/template/rooms/{{ROOM_TYPE_2_IMAGE_2}}",
+        "/assets/template/rooms/{{ROOM_TYPE_2_IMAGE_3}}"
+      ],
+      "amenities": [
+        "{{ROOM_TYPE_2_AMENITY_1}}",
+        "{{ROOM_TYPE_2_AMENITY_2}}",
+        "{{ROOM_TYPE_2_AMENITY_3}}"
+      ]
+    },
+    {
+      "id": "two-bedroom",
+      "name": "{{ROOM_TYPE_3_NAME}}",
+      "description": "{{ROOM_TYPE_3_DESCRIPTION}}",
+      "size": "{{ROOM_TYPE_3_SIZE}}",
+      "occupancy": {
+        "adults": "{{ROOM_TYPE_3_ADULTS}}",
+        "children": "{{ROOM_TYPE_3_CHILDREN}}"
+      },
+      "price": {
+        "currency": "{{CURRENCY}}",
+        "amount": "{{ROOM_TYPE_3_PRICE}}",
+        "period": "{{PRICE_PERIOD}}"
+      },
+      "images": [
+        "/assets/template/rooms/{{ROOM_TYPE_3_IMAGE_1}}",
+        "/assets/template/rooms/{{ROOM_TYPE_3_IMAGE_2}}",
+        "/assets/template/rooms/{{ROOM_TYPE_3_IMAGE_3}}"
+      ],
+      "amenities": [
+        "{{ROOM_TYPE_3_AMENITY_1}}",
+        "{{ROOM_TYPE_3_AMENITY_2}}",
+        "{{ROOM_TYPE_3_AMENITY_3}}"
+      ]
+    }
+  ]
+}

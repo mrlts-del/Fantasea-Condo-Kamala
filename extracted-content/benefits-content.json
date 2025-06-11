@@ -1,0 +1,21 @@
+{
+  "sectionTitle": "Direct Booking Benefits",
+  "sectionDescription": "Enjoy our exclusive offerings when booking direct",
+  "benefits": [
+    {
+      "icon": "Tag",
+      "title": "Direct booking discount",
+      "description": ""
+    },
+    {
+      "icon": "ScanText",
+      "title": "Contactless check-in/out option",
+      "description": ""
+    },
+    {
+      "icon": "MessageSquarePlus",
+      "title": "Special requests upon request",
+      "description": ""
+    }
+  ]
+}

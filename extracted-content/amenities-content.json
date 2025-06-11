@@ -1,0 +1,51 @@
+{
+  "sectionTitle": "Amenities & Attractions",
+  "sectionDescription": "Enjoy our comprehensive range of facilities and services",
+  "amenities": [
+    {
+      "icon": "Wifi",
+      "title": "Free WiFi",
+      "description": "Complimentary high-speed internet access available throughout the property"
+    },
+    {
+      "icon": "Utensils",
+      "title": "Fully Equipped Kitchen",
+      "description": "Complete with microwave, toaster, refrigerator, coffee machine and kitchenware"
+    },
+    {
+      "icon": "LucideWaves",
+      "title": "Rooftop Swimming Pool",
+      "description": "Enjoy scenic views from the rooftop pool area with shallow end and pool towels provided"
+    },
+    {
+      "icon": "LucideSunset",
+      "title": "Beachfront Location",
+      "description": "Property provides beachfront accommodations just minutes from Kamala Beach"
+    },
+    {
+      "icon": "ParkingSquare",
+      "title": "Free On-Site Parking",
+      "description": "Convenient parking available directly at the property for guests"
+    },
+    {
+      "icon": "AirVent",
+      "title": "Air Conditioning",
+      "description": "Climate control available in all units for your comfort"
+    },
+    {
+      "icon": "Flower",
+      "title": "Garden & Sun Terrace",
+      "description": "Relax in the beautifully maintained garden or sunbathe on the terrace"
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "24-Hour Security",
+      "description": "CCTV in common areas and outside property with around-the-clock security personnel"
+    },
+    {
+      "icon": "Mountain",
+      "title": "Kathu Waterfall",
+      "description": "Explore the beautiful Kathu Waterfall, a natural attraction nearby"
+    }
+  ]
+}

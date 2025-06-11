@@ -1,0 +1,35 @@
+// This is the main page component for the hotel website
+
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
+import Rooms from "@/components/sections/Rooms";
+import Amenities from "@/components/sections/Amenities";
+import Benefits from "@/components/sections/Benefits";
+import Reviews from "@/components/sections/Reviews";
+import Location from "@/components/sections/Location";
+import Footer from "@/components/layout/Footer";
+import BookingStateProvider from "@/components/BookingStateProvider";
+
+export default function Home() {
+  
+  return (
+    <BookingStateProvider>
+      <main className="min-h-screen relative">
+        <Navbar />
+        
+        {/* Hero Section with Booking Bar Container */}
+        <div className="relative overflow-visible">
+          <Hero />
+
+        </div>
+        
+        <Rooms />
+        <Amenities />
+        <Benefits />
+        <Reviews />
+        <Location />
+        <Footer />
+      </main>
+    </BookingStateProvider>
+  );
+}

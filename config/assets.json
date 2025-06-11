@@ -1,0 +1,75 @@
+{
+  "basePath": "/assets/template",
+  "hero": {
+    "background": "{{HERO_BACKGROUND_PATH}}",
+    "video": "{{HERO_VIDEO_PATH}}"
+  },
+  "logo": {
+    "main": "{{LOGO_MAIN_PATH}}",
+    "favicon": "{{FAVICON_PATH}}"
+  },
+  "rooms": {
+    "studio": {
+      "images": [
+        "{{STUDIO_IMAGE_1_PATH}}",
+        "{{STUDIO_IMAGE_2_PATH}}",
+        "{{STUDIO_IMAGE_3_PATH}}"
+      ]
+    },
+    "oneBedroom": {
+      "images": [
+        "{{ONE_BR_IMAGE_1_PATH}}",
+        "{{ONE_BR_IMAGE_2_PATH}}",
+        "{{ONE_BR_IMAGE_3_PATH}}"
+      ]
+    },
+    "twoBedroom": {
+      "images": [
+        "{{TWO_BR_IMAGE_1_PATH}}",
+        "{{TWO_BR_IMAGE_2_PATH}}",
+        "{{TWO_BR_IMAGE_3_PATH}}"
+      ]
+    }
+  },
+  "gallery": {
+    "categories": {
+      "rooms": {
+        "path": "/gallery/Rooms",
+        "images": [
+          "{{GALLERY_ROOM_IMAGE_1}}",
+          "{{GALLERY_ROOM_IMAGE_2}}",
+          "{{GALLERY_ROOM_IMAGE_3}}"
+        ]
+      },
+      "facilities": {
+        "path": "/gallery/Facilities",
+        "images": [
+          "{{GALLERY_FACILITY_IMAGE_1}}",
+          "{{GALLERY_FACILITY_IMAGE_2}}",
+          "{{GALLERY_FACILITY_IMAGE_3}}"
+        ]
+      },
+      "area": {
+        "path": "/gallery/Area",
+        "images": [
+          "{{GALLERY_AREA_IMAGE_1}}",
+          "{{GALLERY_AREA_IMAGE_2}}",
+          "{{GALLERY_AREA_IMAGE_3}}"
+        ]
+      }
+    }
+  },
+  "blog": {
+    "thumbnails": {
+      "path": "/article-thumbnails",
+      "images": [
+        "{{BLOG_THUMBNAIL_1}}",
+        "{{BLOG_THUMBNAIL_2}}",
+        "{{BLOG_THUMBNAIL_3}}"
+      ]
+    }
+  },
+  "landingPage": {
+    "hero": "{{LANDING_PAGE_HERO_PATH}}"
+  }
+}

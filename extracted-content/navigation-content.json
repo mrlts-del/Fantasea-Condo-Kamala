@@ -1,0 +1,37 @@
+{
+  "siteName": "Fantasea Condo Kamala",
+  "logoPath": "/logo.png",
+  "logoAlt": "Fantasea Condo Kamala",
+  "bookingUrl": "https://live.ipms247.com/booking/book-rooms-sebastianchentest",
+  "navigationLinks": [
+    { "href": "/", "label": "Home" },
+    { "href": "/rooms", "label": "Rooms" },
+    { "href": "/location", "label": "Location" },
+    { "href": "/gallery", "label": "Gallery" },
+    { "href": "/blog", "label": "Blog" }
+  ],
+  "footerLinks": {
+    "quickLinks": [
+      { "href": "/", "label": "Home" },
+      { "href": "/rooms", "label": "Rooms" },
+      { "href": "/#amenities", "label": "Amenities" },
+      { "href": "/#reviews", "label": "Reviews" },
+      { "href": "/location", "label": "Location" }
+    ],
+    "moreInfo": [
+      { "href": "/gallery", "label": "Photo Gallery" },
+      { "href": "/blog", "label": "Local Guide" }
+    ]
+  },
+  "contactInfo": {
+    "address": {
+      "line1": "Fantasea Condo Kamala",
+      "line2": "Kamala Beach, Phuket",
+      "line3": "Thailand 83120"
+    },
+    "phone": "+66 76 123 456",
+    "email": "info@kamalahotel.com"
+  },
+  "socialLinks": [],
+  "copyright": "© 2024 Fantasea Condo Kamala. All rights reserved."
+}

@@ -1,48 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import getConfig from "@/lib/config";
+import type { RoomsConfig } from "../../config/types";
 
-const ROOM_TYPES = [
-  {
-    name: "One-BR Apartment",
-    description: "This 27 m² apartment features a pool with a view. The air-conditioned apartment has 1 bedroom and 1 bathroom with a shower and a hairdryer. Guests can make meals in the kitchen that has a refrigerator, kitchenware, a microwave and a toaster. Boasting a balcony with garden views, this apartment also features a coffee machine and a flat-screen TV with cable channels. The unit has 1 bed.",
-    images: [
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment2.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment6.jpg", 
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment3.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment4.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment5.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment.jpg"
-    ]
-  },
-  {
-    name: "Studio w/ Balcony",
-    description: "This 34 m² studio's special feature is the pool with a view. The fully equipped kitchen features a refrigerator, kitchenware, a microwave and a toaster. This air-conditioned studio includes a flat-screen TV with cable channels, a private bathroom as well as a balcony with mountain views. The unit offers 1 bed.",
-    images: [
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony4.jpg",
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony.jpg",
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony2.jpg",
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony3.jpg",
-    ]
-  },
-  {
-    name: "Two-BR Apartment w/ Balcony",
-    description: "This 47 m² apartment's standout feature is the pool with a view. This air-conditioned apartment is consisted of of 1 living room, 2 separate bedrooms and 2 bathrooms with a shower. In the kitchen, guests will find a refrigerator, kitchenware, a microwave and a toaster. Featuring a balcony with mountain views, this apartment also offers a coffee machine and a flat-screen TV with cable channels. The unit offers 2 beds.",
-    images: [
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony2.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony3.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony4.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony5.jpg"
-    ]
-  }
-];
-
-const Rooms = () => {
+function RoomsContent({ config }: { config: RoomsConfig }) {
+  const ROOM_TYPES = config.roomTypes;
   return (
     <section id="rooms" className="py-12 sm:py-16 lg:py-20 bg-brand-cream dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">Our Rooms</h1>
-        <p className="body-text text-center text-brand-charcoal/70 mb-12 max-w-2xl mx-auto">Discover our carefully designed accommodations, each offering comfort and elegance for your perfect stay.</p>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">{config.sectionTitle}</h1>
+        <p className="body-text text-center text-brand-charcoal/70 mb-12 max-w-2xl mx-auto">{config.sectionDescription}</p>
         
         {/* Unified Room Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
@@ -58,7 +25,7 @@ const Rooms = () => {
               <div className="relative h-48 flex-shrink-0">
                 <Carousel className="w-full h-full">
                   <CarouselContent>
-                    {room.images.map((image, imgIndex) => (
+                    {room.images?.map((image, imgIndex) => (
                       <CarouselItem key={imgIndex}>
                         <div className="relative h-48">
                           <img
@@ -116,4 +83,8 @@ const Rooms = () => {
   );
 };
 
-export default Rooms;
+
+export default function Rooms() {
+  const config = getConfig();
+  return <RoomsContent config={config.rooms} />;
+}

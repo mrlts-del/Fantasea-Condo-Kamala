@@ -1,0 +1,97 @@
+{
+  "pages": {
+    "home": {
+      "title": "Fantasea Condo Kamala - Luxury Beachfront Accommodation",
+      "metaDescription": "Experience luxury at Fantasea Condo Kamala. Modern apartments with stunning ocean views, rooftop pool, and prime location near Kamala Beach, Phuket.",
+      "keywords": ["Kamala Beach accommodation", "Phuket condo rental", "beachfront apartment", "luxury vacation rental"]
+    },
+    "rooms": {
+      "title": "Our Rooms",
+      "description": "Discover our carefully designed accommodations, each offering comfort and elegance for your perfect stay.",
+      "metaDescription": "Explore our range of luxury apartments at Fantasea Condo Kamala - from cozy studios to spacious two-bedroom units, all with modern amenities and stunning views.",
+      "roomTypes": [
+        {
+          "name": "One-BR Apartment",
+          "description": "This 27 m² apartment features a pool with a view. The air-conditioned apartment has 1 bedroom and 1 bathroom with a shower and a hairdryer. Guests can make meals in the kitchen that has a refrigerator, kitchenware, a microwave and a toaster. Boasting a balcony with garden views, this apartment also features a coffee machine and a flat-screen TV with cable channels. The unit has 1 bed.",
+          "images": [
+            "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment2.jpg",
+            "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment6.jpg",
+            "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment3.jpg",
+            "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment4.jpg",
+            "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment5.jpg",
+            "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment.jpg"
+          ],
+          "amenities": ["27 m²", "Private kitchen", "Private bathroom", "Balcony", "Rooftop Pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
+        },
+        {
+          "name": "Studio w/ Balcony",
+          "description": "This 34 m² studio's special feature is the pool with a view. The fully equipped kitchen features a refrigerator, kitchenware, a microwave and a toaster. This air-conditioned studio includes a flat-screen TV with cable channels, a private bathroom as well as a balcony with mountain views. The unit offers 1 bed.",
+          "images": [
+            "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony4.jpg",
+            "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony.jpg",
+            "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony2.jpg",
+            "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony3.jpg"
+          ],
+          "amenities": ["34 m²", "Private Kitchen", "Private Bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
+        },
+        {
+          "name": "Two-BR Apartment w/ Balcony",
+          "description": "This 47 m² apartment's standout feature is the pool with a view. This air-conditioned apartment is consisted of of 1 living room, 2 separate bedrooms and 2 bathrooms with a shower. In the kitchen, guests will find a refrigerator, kitchenware, a microwave and a toaster. Featuring a balcony with mountain views, this apartment also offers a coffee machine and a flat-screen TV with cable channels. The unit offers 2 beds.",
+          "images": [
+            "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony.jpg",
+            "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony2.jpg",
+            "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony3.jpg",
+            "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony4.jpg",
+            "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony5.jpg"
+          ],
+          "amenities": ["47 m²", "Kitchen", "Private bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
+        }
+      ]
+    },
+    "location": {
+      "title": "Location & Nearby Attractions",
+      "description": "Discover the perfect location of Fantasea Condo Kamala, surrounded by beautiful beaches, attractions, and local experiences in Phuket.",
+      "metaDescription": "Explore the prime location of Fantasea Condo Kamala - close to Kamala Beach, restaurants, attractions, and transportation in Phuket, Thailand.",
+      "categories": ["ALL", "Cafes & Restaurants", "Parks & Nature", "Beaches", "Attractions & Museums", "Transportation"],
+      "locations": [
+        {
+          "id": 1,
+          "category": "Cafes & Restaurants",
+          "name": "Feelings Cafe",
+          "description": "A beautifully designed cafe in Phuket Town, known for its good atmosphere, spacious layout, and many photo spots. Offers food, drinks, and desserts.",
+          "distance": "6 km",
+          "image": "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747894816/feelingscafe_f0w3bs.jpg"
+        },
+        {
+          "id": 4,
+          "category": "Cafes & Restaurants",
+          "name": "Chapayom",
+          "description": "A cafe chain known for Thai tea and beverages, located about 1 km from Kamala Beach.",
+          "distance": "1 km",
+          "image": "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747894818/Chapayom_hnf9dq.png"
+        },
+        {
+          "id": 11,
+          "category": "Beaches",
+          "name": "Kamala Beach",
+          "description": "A 2 km long, family-friendly beach with soft sand, gentle waves, and a laid-back atmosphere. Offers water sports, beach clubs, and sunset views.",
+          "distance": "950 m",
+          "image": "https://res.cloudinary.com/dvumjbuwj/image/upload/v1747894815/kamala_zjkgi7.jpg"
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Photo Gallery",
+      "description": "Explore our beautiful accommodations and facilities through our comprehensive photo gallery.",
+      "metaDescription": "Browse through our photo gallery showcasing rooms, facilities, and the beautiful surroundings of Fantasea Condo Kamala in Phuket.",
+      "categories": ["ALL", "Rooms", "Facilities", "Area"],
+      "viewModes": ["grid", "carousel"],
+      "features": {
+        "autoPlay": true,
+        "slideshow": true,
+        "fullscreen": true,
+        "imageInfo": true
+      }
+    }
+  }
+}

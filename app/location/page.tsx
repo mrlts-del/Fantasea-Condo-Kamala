@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -9,6 +9,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import getConfig from '@/lib/config';
+import type { PagesConfig, LocationItem } from '@/config/types';
 
 const CATEGORIES = ["ALL", "Cafes & Restaurants", "Parks & Nature", "Beaches", "Attractions & Museums", "Transportation"];
 
@@ -130,12 +132,31 @@ const LOCATIONS_DATA = [
 const ITEMS_PER_PAGE = 9;
 
 export default function LocationPage() {
-  const [activeTab, setActiveTab] = useState(CATEGORIES[0]);
+  const hotelConfig = getConfig();
+  const pagesConfig = hotelConfig.pages;
+  const locationData = hotelConfig.location;
+  const [activeTab, setActiveTab] = useState("ALL");
   const [currentPage, setCurrentPage] = useState(0);
 
-  const filteredLocations = activeTab === "ALL"
-    ? LOCATIONS_DATA
-    : LOCATIONS_DATA.filter(loc => loc.category === activeTab);
+  if (!pagesConfig || !locationData) {
+    return (
+      <div className="flex flex-col min-h-screen bg-brand-cream">
+        <Navbar />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-brand-teal mx-auto mb-4"></div>
+            <p className="text-brand-charcoal">Loading location data...</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+  // Use nearbyAttractions as the location data
+  const attractions = locationData.nearbyAttractions || [];
+  const categories = ["ALL"]; // Only show all attractions since we don't have categories
+  
+  const filteredLocations = attractions;
 
   const pageCount = Math.ceil(filteredLocations.length / ITEMS_PER_PAGE);
   const currentLocations = filteredLocations.slice(
@@ -152,8 +173,8 @@ export default function LocationPage() {
       <Navbar />
       <main className="flex-1 w-full px-3 sm:px-4 py-6 sm:py-8 lg:py-10 pt-20 sm:pt-24">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">Location & Nearby</h1>
-          <p className="text-center text-brand-charcoal/70 mb-8 max-w-2xl mx-auto">Discover the beautiful attractions and destinations surrounding our hotel in Kamala, Phuket.</p>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">{locationData.sectionTitle}</h1>
+          <p className="text-center text-brand-charcoal/70 mb-8 max-w-2xl mx-auto">{locationData.sectionDescription}</p>
 
           {/* Map Section */}
           <div className="rounded-xl overflow-hidden shadow-lg border border-brand-teal/10 aspect-video min-h-[300px] sm:min-h-[400px] h-full mb-10 sm:mb-12 lg:mb-14 bg-white max-w-full">
@@ -171,7 +192,7 @@ export default function LocationPage() {
           {/* Category Navigation */}
           <Tabs value={activeTab} onValueChange={(value) => { setActiveTab(value); setCurrentPage(0); }} className="mb-8 sm:mb-10">
             <TabsList className="flex flex-wrap justify-center gap-1 sm:gap-2 w-full mx-auto max-w-full px-2 sm:px-4 h-auto p-1 bg-white/50 border border-brand-teal/20">
-              {CATEGORIES.map(category => (
+              {categories.map(category => (
                 <TabsTrigger 
                   key={category} 
                   value={category} 
@@ -183,22 +204,16 @@ export default function LocationPage() {
             </TabsList>
           </Tabs>
 
-          {/* Locations Grid */}
+          {/* Nearby Attractions Grid */}
           {currentLocations.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-10">
-              {currentLocations.map(location => (
-                <Card key={location.id} className="bg-white border-brand-teal/10 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader className="p-0">
-                    <div className="aspect-video relative w-full">
-                       <Image src={location.image} alt={location.name} layout="fill" objectFit="cover" className="rounded-t-xl" />
-                    </div>
-                  </CardHeader>
+              {currentLocations.map((attraction, index) => (
+                <Card key={index} className="bg-white border-brand-teal/10 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-4 sm:p-6">
-                    <CardTitle className="mb-3 text-lg sm:text-xl text-brand-charcoal font-serif">{location.name}</CardTitle>
-                    <CardDescription className="text-sm sm:text-base mb-3 leading-relaxed text-brand-charcoal/70">{location.description}</CardDescription>
+                    <CardTitle className="mb-3 text-lg sm:text-xl text-brand-charcoal font-serif">{attraction.name}</CardTitle>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 rounded-full bg-brand-coral"></div>
-                      <p className="text-sm text-brand-teal font-medium">{location.distance}</p>
+                      <p className="text-sm text-brand-teal font-medium">{attraction.distance}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -206,7 +221,7 @@ export default function LocationPage() {
             </div>
           ) : (
             <div className="text-center bg-white rounded-xl p-8 shadow-md border border-brand-teal/10 mb-8 sm:mb-10">
-              <p className="text-brand-charcoal/70 text-base sm:text-lg">No locations found for this category.</p>
+              <p className="text-brand-charcoal/70 text-base sm:text-lg">No nearby attractions found.</p>
             </div>
           )}
 

@@ -4,6 +4,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { HotelSchema } from '@/components/StructuredData';
 import SkipNavigation from '@/components/SkipNavigation';
+import getConfig from '@/lib/config';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -15,23 +16,39 @@ const playfair = Playfair_Display({
   variable: '--font-serif',
 });
 
-export const metadata: Metadata = {
-  title: 'Fantasea Condo Kamala | Luxury Beachfront Accommodation Phuket',
-  description: 'Experience luxury at Fantasea Condo Kamala. Premium beachfront accommodation with stunning ocean views and modern amenities in Kamala Beach, Phuket.',
-  openGraph: {
-    title: 'Fantasea Condo Kamala | Luxury Beachfront Accommodation',
-    description: 'Experience luxury at Fantasea Condo Kamala. Premium beachfront accommodation with stunning ocean views.',
-    url: 'https://fantasea-condo-kamala.com',
-    siteName: 'Fantasea Condo Kamala',
-    images: ['/Fantasea_Condo_Images/Hero/Hero.jpg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Fantasea Condo Kamala | Luxury Beachfront Accommodation',
-    description: 'Experience luxury at Fantasea Condo Kamala.',
-    images: ['/Fantasea_Condo_Images/Hero/Hero.jpg'],
-  },
-};
+// Generate metadata dynamically from configuration
+export async function generateMetadata(): Promise<Metadata> {
+  try {
+    const config = getConfig();
+    const siteConfig = config.site;
+    
+    return {
+      title: siteConfig.seo.title,
+      description: siteConfig.seo.description,
+      keywords: siteConfig.seo.keywords,
+      openGraph: {
+        title: siteConfig.seo.openGraph.title,
+        description: siteConfig.seo.openGraph.description,
+        url: siteConfig.seo.openGraph.url,
+        siteName: siteConfig.seo.openGraph.siteName,
+        images: siteConfig.seo.openGraph.images,
+      },
+      twitter: {
+        card: siteConfig.seo.twitter.card as 'summary_large_image',
+        title: siteConfig.seo.twitter.title,
+        description: siteConfig.seo.twitter.description,
+        images: siteConfig.seo.twitter.images,
+      },
+    };
+  } catch (error) {
+    console.error('Error loading site configuration for metadata:', error);
+    // Fallback metadata
+    return {
+      title: 'Hotel Template | Luxury Accommodation',
+      description: 'Experience luxury accommodation with stunning views and modern amenities.',
+    };
+  }
+}
 
 export default function RootLayout({
   children,

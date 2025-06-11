@@ -1,77 +1,79 @@
-import { Wifi, UtensilsCrossed, Dumbbell, Car, Coffee, PawPrint, Globe, Utensils, LucideWaves, ParkingSquare, AirVent, Flower, ShieldCheck, LucideSunset, Mountain } from "lucide-react";
+"use client";
+import { Card, CardContent } from "@/components/ui/card";
+import Container from "@/components/ui/Container";
+import {
+  Wifi,
+  Car,
+  Waves,
+  Coffee,
+  Utensils,
+  MapPin,
+  Plane,
+  ShoppingBag,
+  LucideWaves,
+  LucideSunset,
+  ParkingSquare,
+  AirVent,
+  Flower,
+  ShieldCheck,
+  Mountain,
+} from "lucide-react";
+import getConfig from "@/lib/config";
+import { AmenitiesConfig } from "@/config/types";
 
-const amenities = [
-  {
-    icon: <Wifi className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Free WiFi",
-    description: "Complimentary high-speed internet access available throughout the property"
-  },
-  {
-    icon: <Utensils className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Fully Equipped Kitchen",
-    description: "Complete with microwave, toaster, refrigerator, coffee machine and kitchenware"
-  },
-  {
-    icon: <LucideWaves className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Rooftop Swimming Pool",
-    description: "Enjoy scenic views from the rooftop pool area with shallow end and pool towels provided"
-  },
-  {
-    icon: <LucideSunset className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Beachfront Location",
-    description: "Property provides beachfront accommodations just minutes from Kamala Beach"
-  },
-  {
-    icon: <ParkingSquare className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Free On-Site Parking",
-    description: "Convenient parking available directly at the property for guests"
-  },
-  {
-    icon: <AirVent className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Air Conditioning",
-    description: "Climate control available in all units for your comfort"
-  },
-  {
-    icon: <Flower className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Garden & Sun Terrace",
-    description: "Relax in the beautifully maintained garden or sunbathe on the terrace"
-  },
-  {
-    icon: <ShieldCheck className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "24-Hour Security",
-    description: "CCTV in common areas and outside property with around-the-clock security personnel"
-  },
-  {
-    icon: <Mountain className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />,
-    title: "Kathu Waterfall",
-    description: "Explore the beautiful Kathu Waterfall, a natural attraction nearby"
-  }
-];
-
-const Amenities = () => {
-  return (
-    <section id="amenities" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 sm:mb-16 lg:mb-20 text-center">
-          <h2 className="section-heading font-bold font-serif mb-4 text-brand-charcoal">Amenities & Attractions</h2>
-          <p className="body-text text-brand-charcoal/80 max-w-2xl mx-auto">Enjoy our comprehensive range of facilities and services</p>
-        </div>
-
-        {/* 4-column grid (mobile), 4-column (tablet), 4-column (desktop) */}
-        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-x-2 gap-y-4 sm:gap-x-12 sm:gap-y-16" >
-          {amenities.map((amenity, index) => (
-            <div key={index} className="text-center group">
-              {/* Responsive circular background */}
-              <div className="mx-auto mb-3 sm:mb-5 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center rounded-full bg-brand-teal/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:bg-brand-teal/20">
-                {amenity.icon}
-              </div>
-              <h3 className="font-medium text-xs sm:text-sm lg:text-base text-brand-charcoal leading-tight">{amenity.title}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+const iconMap = {
+  Wifi,
+  Car,
+  Waves,
+  Coffee,
+  Utensils,
+  MapPin,
+  Plane,
+  ShoppingBag,
+  LucideWaves,
+  LucideSunset,
+  ParkingSquare,
+  AirVent,
+  Flower,
+  ShieldCheck,
+  Mountain,
 };
 
-export default Amenities;
+export default function Amenities() {
+  const config = getConfig();
+  const amenitiesConfig: AmenitiesConfig = config.amenities;
+
+  return (
+    <section className="py-12 sm:py-16 lg:py-20">
+      <Container>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="section-heading font-bold font-serif mb-4 text-brand-charcoal">
+            {amenitiesConfig.sectionTitle}
+          </h2>
+          <p className="body-text text-brand-charcoal/80 max-w-2xl mx-auto">
+            {amenitiesConfig.sectionDescription}
+          </p>
+        </div>
+        <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          {amenitiesConfig.amenities.map((amenity, index) => {
+            const IconComponent = iconMap[amenity.icon as keyof typeof iconMap];
+            return (
+              <div key={index} className="group text-center">
+                <div className="mx-auto mb-3 sm:mb-5 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center rounded-full bg-brand-teal/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:bg-brand-teal/20">
+                  {IconComponent ? (
+                    <IconComponent className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-brand-teal" />
+                  ) : (
+                    <div className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 bg-brand-teal rounded" />
+                  )}
+                </div>
+                <h3 className="font-medium text-xs sm:text-sm lg:text-base text-brand-charcoal leading-tight">
+                  {amenity.title}
+                </h3>
+              </div>
+            );
+          })}
+        </div>
+      </Container>
+    </section>
+  );
+}

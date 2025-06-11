@@ -1,0 +1,60 @@
+{
+  "sectionTitle": "What Our Guests Say",
+  "sectionDescription": "Read authentic reviews from our satisfied guests who have experienced our hospitality",
+  "reviews": {
+    "google": [
+      {
+        "quote": "Exceptional service and beautiful location. The staff went above and beyond to make our stay memorable.",
+        "author": "Sarah Johnson",
+        "platform": "Google",
+        "rating": 5,
+        "avatar": "/avatars/avatar-1.jpg",
+        "country": "United States"
+      },
+      {
+        "quote": "Perfect beachfront location with stunning views. Highly recommend for a relaxing getaway.",
+        "author": "Michael Chen",
+        "platform": "Google",
+        "rating": 5,
+        "avatar": "/avatars/avatar-2.jpg",
+        "country": "Canada"
+      }
+    ],
+    "booking": [
+      {
+        "quote": "Amazing experience! The room was spacious and clean, and the beach access was fantastic.",
+        "author": "Emma Wilson",
+        "platform": "Booking.com",
+        "rating": 5,
+        "avatar": "/avatars/avatar-3.jpg",
+        "country": "United Kingdom"
+      },
+      {
+        "quote": "Great value for money. The amenities were excellent and the location couldn't be better.",
+        "author": "David Martinez",
+        "platform": "Booking.com",
+        "rating": 4,
+        "avatar": "/avatars/avatar-4.jpg",
+        "country": "Spain"
+      }
+    ],
+    "tripadvisor": [
+      {
+        "quote": "Outstanding hotel with incredible attention to detail. The Japanese-style accommodations were unique and comfortable.",
+        "author": "Lisa Thompson",
+        "platform": "TripAdvisor",
+        "rating": 5,
+        "avatar": "/avatars/avatar-5.jpg",
+        "country": "Australia"
+      },
+      {
+        "quote": "Wonderful stay with my family. The kids loved the beach and the adults enjoyed the peaceful atmosphere.",
+        "author": "Robert Kim",
+        "platform": "TripAdvisor",
+        "rating": 5,
+        "avatar": "/avatars/avatar-6.jpg",
+        "country": "South Korea"
+      }
+    ]
+  }
+}

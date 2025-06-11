@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import Navbar from "@/components/layout/Navbar";
@@ -8,50 +8,19 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/
 import { ChevronLeft, ChevronRight, X, Play, Pause, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/ui/Container";
+import getConfig from '@/lib/config';
+import type { GalleryConfig } from '@/config/types';
 
-const GALLERY_CATEGORIES = ["ALL", "Rooms", "Facilities", "Area"];
 
-const ALL_IMAGES_DATA = [
-  // Same data structure as before, but with additional properties
-  { id: 1, src: "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment.jpg", alt: "One-Bedroom Apartment", category: "Rooms", description: "Spacious one-bedroom apartment with modern amenities", photographer: "Hotel Staff", date: "2024", tags: ["bedroom", "modern", "spacious"] },
-  { id: 2, src: "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_2.jpg", alt: "One-Bedroom Apartment 2", category: "Rooms", description: "Elegant bedroom with ocean view", photographer: "Hotel Staff", date: "2024", tags: ["bedroom", "ocean view", "elegant"] },
-  { id: 3, src: "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_3.jpg", alt: "One-Bedroom Apartment 3", category: "Rooms", description: "Modern living space with contemporary design", photographer: "Hotel Staff", date: "2024", tags: ["living room", "contemporary", "modern"] },
-  { id: 4, src: "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_4.jpg", alt: "One-Bedroom Apartment 4", category: "Rooms", description: "Luxurious bathroom with premium fixtures", photographer: "Hotel Staff", date: "2024", tags: ["bathroom", "luxury", "premium"] },
-  { id: 5, src: "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_5.jpg", alt: "One-Bedroom Apartment 5", category: "Rooms", description: "Fully equipped kitchen for your convenience", photographer: "Hotel Staff", date: "2024", tags: ["kitchen", "equipped", "convenience"] },
-  { id: 6, src: "/Fantasea_Condo_Images/Gallery/Rooms/One-Bedroom_Apartment_6.jpg", alt: "One-Bedroom Apartment 6", category: "Rooms", description: "Private balcony with stunning views", photographer: "Hotel Staff", date: "2024", tags: ["balcony", "private", "views"] },
-  { id: 7, src: "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony.jpg", alt: "Studio with Balcony", category: "Rooms", description: "Cozy studio apartment with balcony access", photographer: "Hotel Staff", date: "2024", tags: ["studio", "cozy", "balcony"] },
-  { id: 8, src: "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony_2.jpg", alt: "Studio with Balcony 2", category: "Rooms", description: "Efficient layout maximizing space and comfort", photographer: "Hotel Staff", date: "2024", tags: ["studio", "efficient", "space"] },
-  { id: 9, src: "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony_3.jpg", alt: "Studio with Balcony 3", category: "Rooms", description: "Bright and airy studio with natural light", photographer: "Hotel Staff", date: "2024", tags: ["studio", "bright", "natural light"] },
-  { id: 10, src: "/Fantasea_Condo_Images/Gallery/Rooms/Studio_with_Balcony_4.jpg", alt: "Studio with Balcony 4", category: "Rooms", description: "Modern amenities in a compact design", photographer: "Hotel Staff", date: "2024", tags: ["studio", "modern", "compact"] },
-  { id: 11, src: "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony.jpg", alt: "Two-Bedroom Apartment with Balcony", category: "Rooms", description: "Spacious two-bedroom apartment perfect for families", photographer: "Hotel Staff", date: "2024", tags: ["two bedroom", "spacious", "family"] },
-  { id: 12, src: "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_2.jpg", alt: "Two-Bedroom Apartment with Balcony 2", category: "Rooms", description: "Master bedroom with panoramic views", photographer: "Hotel Staff", date: "2024", tags: ["master bedroom", "panoramic", "views"] },
-  { id: 13, src: "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_3.jpg", alt: "Two-Bedroom Apartment with Balcony 3", category: "Rooms", description: "Second bedroom with comfortable furnishing", photographer: "Hotel Staff", date: "2024", tags: ["second bedroom", "comfortable", "furnishing"] },
-  { id: 14, src: "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_4.jpg", alt: "Two-Bedroom Apartment with Balcony 4", category: "Rooms", description: "Open plan living and dining area", photographer: "Hotel Staff", date: "2024", tags: ["open plan", "living", "dining"] },
-  { id: 15, src: "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_5.jpg", alt: "Two-Bedroom Apartment with Balcony 5", category: "Rooms", description: "Premium kitchen with island counter", photographer: "Hotel Staff", date: "2024", tags: ["kitchen", "premium", "island"] },
-  { id: 16, src: "/Fantasea_Condo_Images/Gallery/Rooms/Two-Bedroom_Apartment_with_Balcony_6.jpg", alt: "Two-Bedroom Apartment with Balcony 6", category: "Rooms", description: "Expansive balcony for outdoor relaxation", photographer: "Hotel Staff", date: "2024", tags: ["balcony", "expansive", "outdoor"] },
-  // Area
-  { id: 17, src: "/Fantasea_Condo_Images/Gallery/Area/646752003.jpg", alt: "Area View 1", category: "Area", description: "Beautiful surroundings of Kamala Beach", photographer: "Hotel Staff", date: "2024", tags: ["beach", "surroundings", "beautiful"] },
-  { id: 18, src: "/Fantasea_Condo_Images/Gallery/Area/646752014.jpg", alt: "Area View 2", category: "Area", description: "Scenic landscape and tropical paradise", photographer: "Hotel Staff", date: "2024", tags: ["landscape", "scenic", "tropical"] },
-  // Facilities
-  { id: 19, src: "/Fantasea_Condo_Images/Gallery/Facilities/646750870.jpg", alt: "Facility 1", category: "Facilities", description: "Resort-style swimming pool", photographer: "Hotel Staff", date: "2024", tags: ["pool", "resort style", "swimming"] },
-  { id: 20, src: "/Fantasea_Condo_Images/Gallery/Facilities/646750874.jpg", alt: "Facility 2", category: "Facilities", description: "Fitness center with modern equipment", photographer: "Hotel Staff", date: "2024", tags: ["fitness", "modern", "equipment"] },
-  { id: 21, src: "/Fantasea_Condo_Images/Gallery/Facilities/646750889.jpg", alt: "Facility 3", category: "Facilities", description: "Relaxing spa and wellness center", photographer: "Hotel Staff", date: "2024", tags: ["spa", "wellness", "relaxing"] },
-  { id: 22, src: "/Fantasea_Condo_Images/Gallery/Facilities/646751983.jpg", alt: "Facility 4", category: "Facilities", description: "Rooftop terrace with panoramic views", photographer: "Hotel Staff", date: "2024", tags: ["rooftop", "terrace", "panoramic"] },
-  { id: 23, src: "/Fantasea_Condo_Images/Gallery/Facilities/646751989.jpg", alt: "Facility 5", category: "Facilities", description: "Business center and meeting rooms", photographer: "Hotel Staff", date: "2024", tags: ["business", "meeting", "center"] },
-  { id: 24, src: "/Fantasea_Condo_Images/Gallery/Facilities/646751992.jpg", alt: "Facility 6", category: "Facilities", description: "Children's play area and family zone", photographer: "Hotel Staff", date: "2024", tags: ["children", "play area", "family"] },
-  { id: 25, src: "/Fantasea_Condo_Images/Gallery/Facilities/646752024.jpg", alt: "Facility 7", category: "Facilities", description: "Concierge and reception services", photographer: "Hotel Staff", date: "2024", tags: ["concierge", "reception", "services"] },
-];
 
 export default function GalleryPage() {
+  const config = getConfig();
+  const galleryConfig = config.gallery;
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'carousel'>('carousel');
   const [showInfo, setShowInfo] = useState(true);
-
-  const filteredImages = activeCategory === "ALL"
-    ? ALL_IMAGES_DATA
-    : ALL_IMAGES_DATA.filter(image => image.category === activeCategory);
 
   // Reset selectedIndex when category changes to ensure images load immediately
   useEffect(() => {
@@ -60,13 +29,40 @@ export default function GalleryPage() {
 
   // Auto-play functionality
   useEffect(() => {
-    if (isPlaying && filteredImages.length > 0) {
-      const interval = setInterval(() => {
-        setSelectedIndex(prev => (prev + 1) % filteredImages.length);
-      }, 3000);
-      return () => clearInterval(interval);
+    if (galleryConfig && isPlaying) {
+      const { gallery } = galleryConfig;
+      const filteredImages = activeCategory === "ALL"
+        ? gallery.images
+        : gallery.images.filter(image => image.category === activeCategory);
+      
+      if (filteredImages.length > 0) {
+        const interval = setInterval(() => {
+          setSelectedIndex(prev => (prev + 1) % filteredImages.length);
+        }, gallery.settings.autoPlayInterval);
+        return () => clearInterval(interval);
+      }
     }
-  }, [isPlaying, filteredImages.length]);
+  }, [isPlaying, activeCategory, galleryConfig]);
+
+  if (!galleryConfig) {
+    return (
+      <div className="min-h-screen flex flex-col bg-brand-cream">
+        <Navbar />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-brand-teal mx-auto mb-4"></div>
+            <p className="text-brand-charcoal">Loading gallery...</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  const { gallery } = galleryConfig;
+  const filteredImages = activeCategory === "ALL"
+    ? gallery.images
+    : gallery.images.filter(image => image.category === activeCategory);
 
   const navigateImage = (direction: 'prev' | 'next') => {
     if (direction === 'prev') {
@@ -85,8 +81,11 @@ export default function GalleryPage() {
         <Container size="lg">
           <div className="text-center mb-8">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold mb-2 text-brand-charcoal">
-              Photo Gallery
+              {gallery.title}
             </h1>
+            <p className="body-text text-center text-brand-charcoal/70 mb-4 max-w-2xl mx-auto">
+              {gallery.description}
+            </p>
           </div>
 
           {/* Controls */}
@@ -95,7 +94,7 @@ export default function GalleryPage() {
             <div className="flex items-center justify-center gap-4 w-full sm:w-auto">
               <Tabs value={activeCategory} onValueChange={setActiveCategory} className="flex-1 sm:flex-none">
                 <TabsList className="flex justify-center h-auto p-1 gap-1 bg-white/50 border border-brand-teal/20 rounded-xl">
-                  {GALLERY_CATEGORIES.map(category => (
+                  {gallery.categories.map(category => (
                     <TabsTrigger 
                       key={category} 
                       value={category} 

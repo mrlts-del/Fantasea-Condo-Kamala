@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -6,16 +6,12 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/rooms", label: "Rooms" },
-  { href: "/location", label: "Location" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/blog", label: "Blog" },
-];
+import getConfig from "@/lib/config";
+import { NavigationConfig } from "@/config/types";
 
 const Navbar = () => {
+  const config = getConfig();
+  const navigationConfig = config.navigation;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -23,6 +19,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -44,8 +41,8 @@ const Navbar = () => {
         <div className="flex items-center">
           <Link href="/" className="cursor-pointer">
             <Image 
-              src="/logo.png" 
-              alt="Fantasea Condo Kamala" 
+              src={navigationConfig?.logoPath || "/logo.png"} 
+              alt={navigationConfig?.siteName || "Fantasea Condo Kamala"} 
               width={280} 
               height={92} 
               className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto"
@@ -58,7 +55,7 @@ const Navbar = () => {
         
         {/* Book Now Button - moved to right */}
         <div className="flex items-center space-x-4">
-          <Link href="https://live.ipms247.com/booking/book-rooms-sebastianchentest" target="_blank" rel="noopener noreferrer">
+          <Link href={navigationConfig?.bookingUrl || "https://live.ipms247.com/booking/book-rooms-sebastianchentest"} target="_blank" rel="noopener noreferrer">
             <Button className="bg-coral-primary hover:bg-coral-dark text-white px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300">
               Book Now
             </Button>
@@ -86,7 +83,7 @@ const Navbar = () => {
         aria-hidden={!isMenuOpen}
       >
         <nav className="flex flex-col items-center justify-center space-y-6 sm:space-y-8 md:space-y-10 text-center w-full px-4">
-          {NAV_LINKS.map((link) => (
+          {navigationConfig?.navigationLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -95,7 +92,7 @@ const Navbar = () => {
             >
               {link.label}
             </Link>
-          ))}
+          )) || []}
         </nav>
         {/* Close button in the top-right corner */}
         <button

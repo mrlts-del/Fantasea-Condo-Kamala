@@ -27,7 +27,7 @@ export function HotelSchema() {
       "@type": "Rating",
       "ratingValue": "5"
     }
-  }
+  };
 
   return (
     <Script id="hotel-schema" type="application/ld+json">

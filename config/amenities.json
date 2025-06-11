@@ -1,0 +1,60 @@
+{
+  "title": "{{AMENITIES_TITLE}}",
+  "description": "{{AMENITIES_DESCRIPTION}}",
+  "categories": [
+    {
+      "id": "wellness",
+      "name": "{{AMENITY_CATEGORY_1_NAME}}",
+      "amenities": [
+        {
+          "name": "{{AMENITY_1_NAME}}",
+          "description": "{{AMENITY_1_DESCRIPTION}}",
+          "icon": "{{AMENITY_1_ICON}}",
+          "image": "/assets/template/gallery/{{AMENITY_1_IMAGE}}"
+        },
+        {
+          "name": "{{AMENITY_2_NAME}}",
+          "description": "{{AMENITY_2_DESCRIPTION}}",
+          "icon": "{{AMENITY_2_ICON}}",
+          "image": "/assets/template/gallery/{{AMENITY_2_IMAGE}}"
+        }
+      ]
+    },
+    {
+      "id": "recreation",
+      "name": "{{AMENITY_CATEGORY_2_NAME}}",
+      "amenities": [
+        {
+          "name": "{{AMENITY_3_NAME}}",
+          "description": "{{AMENITY_3_DESCRIPTION}}",
+          "icon": "{{AMENITY_3_ICON}}",
+          "image": "/assets/template/gallery/{{AMENITY_3_IMAGE}}"
+        },
+        {
+          "name": "{{AMENITY_4_NAME}}",
+          "description": "{{AMENITY_4_DESCRIPTION}}",
+          "icon": "{{AMENITY_4_ICON}}",
+          "image": "/assets/template/gallery/{{AMENITY_4_IMAGE}}"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "name": "{{AMENITY_CATEGORY_3_NAME}}",
+      "amenities": [
+        {
+          "name": "{{AMENITY_5_NAME}}",
+          "description": "{{AMENITY_5_DESCRIPTION}}",
+          "icon": "{{AMENITY_5_ICON}}",
+          "image": "/assets/template/gallery/{{AMENITY_5_IMAGE}}"
+        },
+        {
+          "name": "{{AMENITY_6_NAME}}",
+          "description": "{{AMENITY_6_DESCRIPTION}}",
+          "icon": "{{AMENITY_6_ICON}}",
+          "image": "/assets/template/gallery/{{AMENITY_6_IMAGE}}"
+        }
+      ]
+    }
+  ]
+}

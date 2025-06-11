@@ -1,0 +1,34 @@
+{
+  "name": "{{HOTEL_NAME}}",
+  "tagline": "{{HOTEL_TAGLINE}}",
+  "description": "{{HOTEL_DESCRIPTION}}",
+  "logo": "/assets/template/logo/{{LOGO_FILENAME}}",
+  "contact": {
+    "phone": "{{CONTACT_PHONE}}",
+    "email": "{{CONTACT_EMAIL}}",
+    "address": {
+      "street": "{{ADDRESS_STREET}}",
+      "city": "{{ADDRESS_CITY}}",
+      "state": "{{ADDRESS_STATE}}",
+      "country": "{{ADDRESS_COUNTRY}}",
+      "zipCode": "{{ADDRESS_ZIP}}"
+    }
+  },
+  "social": {
+    "facebook": "{{SOCIAL_FACEBOOK}}",
+    "instagram": "{{SOCIAL_INSTAGRAM}}",
+    "twitter": "{{SOCIAL_TWITTER}}",
+    "linkedin": "{{SOCIAL_LINKEDIN}}"
+  },
+  "seo": {
+    "title": "{{SEO_TITLE}}",
+    "description": "{{SEO_DESCRIPTION}}",
+    "keywords": "{{SEO_KEYWORDS}}",
+    "url": "{{SITE_URL}}"
+  },
+  "booking": {
+    "enabled": true,
+    "provider": "{{BOOKING_PROVIDER}}",
+    "bookingUrl": "{{BOOKING_URL}}"
+  }
+}

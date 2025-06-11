@@ -1,23 +1,30 @@
-"use client";
+'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Star, Maximize, Utensils, Bath, Mountain, Eye, LucideWaves, Sun, AirVent, Tv, Coffee, Wifi } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect, Suspense } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Wifi, Car, Coffee, Utensils, Tv, Wind, Users, Bed, Bath, SquareIcon as Square, Maximize, Mountain, Eye, Waves as LucideWaves, AirVent, Star } from "lucide-react";
+import Container from "@/components/ui/Container";
+import Image from "next/image";
+import getConfig from '@/lib/config';
+import type { PagesConfig } from '@/config/types';
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { ThemeProvider } from "next-themes";
 
-const amenityIconMap: { [key: string]: React.ElementType } = {
+
+const featureIconMap: { [key: string]: React.ElementType } = {
   "m²": Maximize,
   "Kitchen": Utensils,
   "kitchen": Utensils,
+  "Kitchenette": Utensils,
   "Bathroom": Bath,
   "bathroom": Bath,
   "Balcony": Mountain,
+  "balcony": Mountain,
   "View": Eye,
   "Rooftop Pool": LucideWaves,
   "Rooftop pool": LucideWaves,
@@ -25,82 +32,55 @@ const amenityIconMap: { [key: string]: React.ElementType } = {
   "Flat-screen TV": Tv,
   "Coffee machine": Coffee,
   "Free Wifi": Wifi,
+  "bed": Bed,
+  "Queen bed": Bed,
+  "King bed": Bed,
+  "Private balcony": Mountain,
+  "Living area": Users,
+  "Full kitchen": Utensils
 };
 
-const getAmenityIcon = (amenity: string) => {
-  for (const key in amenityIconMap) {
-    if (amenity.includes(key)) {
-      return amenityIconMap[key];
+const getFeatureIcon = (feature: string) => {
+  for (const key in featureIconMap) {
+    if (feature.includes(key)) {
+      return featureIconMap[key];
     }
   }
   return Star; // Default icon if no match is found
 };
 
-const ROOM_TYPES = [
-  {
-    name: "One-BR Apartment",
-    description: "This 27 m² apartment features a pool with a view. The air-conditioned apartment has 1 bedroom and 1 bathroom with a shower and a hairdryer. Guests can make meals in the kitchen that has a refrigerator, kitchenware, a microwave and a toaster. Boasting a balcony with garden views, this apartment also features a coffee machine and a flat-screen TV with cable channels. The unit has 1 bed.",
-    images: [
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment2.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment6.jpg", 
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment3.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment4.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment5.jpg",
-       "/Fantasea_Condo_Images/Rooms/One_BR_Apartment/One-BR_Apartment.jpg"
-    ],
-    amenities: ["27 m²", "Private kitchen", "Private bathroom", "Balcony", "Rooftop Pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
-  },
-  {
-    name: "Studio w/ Balcony",
-    description: "This 34 m² studio's special feature is the pool with a view. The fully equipped kitchen features a refrigerator, kitchenware, a microwave and a toaster. This air-conditioned studio includes a flat-screen TV with cable channels, a private bathroom as well as a balcony with mountain views. The unit offers 1 bed.",
-    images: [
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony4.jpg",
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony.jpg",
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony2.jpg",
-       "/Fantasea_Condo_Images/Rooms/Studio_with_Balcony/Studio_with_Balcony3.jpg",
-    ],
-    amenities: ["34 m²", "Private Kitchen", "Private Bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
-  },
-  {
-    name: "Two-BR Apartment w/ Balcony",
-    description: "This 47 m² apartment's standout feature is the pool with a view. This air-conditioned apartment is consisted of of 1 living room, 2 separate bedrooms and 2 bathrooms with a shower. In the kitchen, guests will find a refrigerator, kitchenware, a microwave and a toaster. Featuring a balcony with mountain views, this apartment also offers a coffee machine and a flat-screen TV with cable channels. The unit offers 2 beds.",
-    images: [
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony2.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony3.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony4.jpg",
-       "/Fantasea_Condo_Images/Rooms/Two_BR_Apartment_with_balcony/Two_BR_Apartment_with_balcony5.jpg"
-    ],
-    amenities: ["47 m²", "Kitchen", "Private bathroom", "View", "Rooftop pool", "Air conditioning", "Flat-screen TV", "Coffee machine", "Free Wifi"]
-  }
-];
 
-function RoomsContent() {
+
+function RoomsContent({ rooms }: { rooms: any }) {
     const [selectedRoom, setSelectedRoom] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const searchParams = useSearchParams();
-    const room = ROOM_TYPES[selectedRoom];
-    
+    const roomType = searchParams.get('type');
+
     useEffect(() => {
-      const roomParam = searchParams.get('room');
-      if (roomParam) {
-        const roomIndex = parseInt(roomParam) - 1;
-        if (roomIndex >= 0 && roomIndex < ROOM_TYPES.length) {
-          setSelectedRoom(roomIndex);
+        if (roomType) {
+            const roomIndex = rooms.roomTypes.findIndex((room: any) => 
+                room.name.toLowerCase().replace(/\s+/g, '-') === roomType
+            );
+            if (roomIndex !== -1) {
+                setSelectedRoom(roomIndex);
+            }
         }
-      }
-    }, [searchParams]);
+    }, [roomType, rooms.roomTypes]);
+
+    const currentRoom = rooms.roomTypes[selectedRoom];
 
     return (
       <>
         <Navbar />
         <div className="bg-brand-cream min-h-screen">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8 pt-12 sm:pt-16">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">Our Rooms</h1>
-            <p className="body-text text-center text-brand-charcoal/70 mb-12 max-w-2xl mx-auto">Discover our carefully designed accommodations, each offering comfort and elegance for your perfect stay.</p>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center mb-2 text-brand-charcoal">{rooms.title}</h1>
+            <p className="body-text text-center text-brand-charcoal/70 mb-12 max-w-2xl mx-auto">{rooms.description}</p>
             
             {/* Unified Room Cards Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto auto-rows-fr">
-              {ROOM_TYPES.map((room, index) => (
+              {rooms.roomTypes.map((room: any, index: number) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg border border-brand-teal/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col min-h-[650px]">
                   
                   {/* Title Section - Refined Design */}
@@ -112,7 +92,7 @@ function RoomsContent() {
                   <div className="relative h-64 flex-shrink-0">
                     <Carousel className="w-full h-full">
                       <CarouselContent>
-                        {room.images.map((image, imgIndex) => (
+                        {room.images.map((image: string, imgIndex: number) => (
                           <CarouselItem key={imgIndex}>
                             <div className="relative h-64">
                               <img
@@ -137,18 +117,18 @@ function RoomsContent() {
                       <p className="body-text text-brand-charcoal/70 leading-relaxed line-clamp-5">{room.description}</p>
                     </div>
                     
-                    {/* Amenities Section - Flexible Growth */}
+                    {/* Features Section - Flexible Growth */}
                     <div className="flex-grow mb-6">
-                      <h3 className="text-lg font-semibold mb-4 text-brand-charcoal text-center">Amenities</h3>
+                      <h3 className="text-lg font-semibold mb-4 text-brand-charcoal text-center">Features</h3>
                       <div className="grid grid-cols-3 gap-2">
-                        {room.amenities.map((amenity, amenityIndex) => {
-                          const IconComponent = getAmenityIcon(amenity);
+                        {(room.features || []).map((feature: string, featureIndex: number) => {
+                           const IconComponent = getFeatureIcon(feature);
                           return (
-                            <div key={amenityIndex} className="flex flex-col items-center text-center space-y-1 p-2 rounded-lg bg-brand-cream/50">
+                            <div key={featureIndex} className="flex flex-col items-center text-center space-y-1 p-2 rounded-lg bg-brand-cream/50">
                               <div className="w-6 h-6 rounded-full bg-brand-teal/10 flex items-center justify-center flex-shrink-0">
                                 <IconComponent className="h-3 w-3 text-brand-teal" />
                               </div>
-                              <span className="text-[0.65rem] text-brand-charcoal font-medium leading-tight">{amenity}</span>
+                              <span className="text-[0.65rem] text-brand-charcoal font-medium leading-tight">{feature}</span>
                             </div>
                           );
                         })}
@@ -176,13 +156,13 @@ function RoomsContent() {
 }
 
 export default function RoomsPage() {
+  const config = getConfig();
+  const rooms = config.rooms;
     return (
-      <ThemeProvider attribute="class" defaultTheme="light">
         <div className="flex flex-col min-h-screen">
           <Suspense fallback={<div>Loading...</div>}>
-            <RoomsContent />
+            <RoomsContent rooms={rooms} />
           </Suspense>
         </div>
-      </ThemeProvider>
     );
   }
